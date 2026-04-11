@@ -16,10 +16,10 @@ const RECENT_PRODUCTS_KEY = "recentProducts";
 export default function DetailPage() {
   const { id } = useParams(); // Henter produkt-id fra URL
   const [product, setProduct] = useState(null); // State til det aktuelle produkt
-  const [allProducts, setAllProducts] = useState([]);
+  const [allProducts, setAllProducts] = useState([]); // Alle produkter til relaterede produkter
   const location = useLocation();
 
-  // Henter produktdata fra products.json baseret på id og
+  // Henter produktdata fra products.json baseret på id
   useEffect(() => {
     const fetchProduct = async () => {
       const response = await fetch(`${import.meta.env.BASE_URL}products.json`);
@@ -27,8 +27,10 @@ export default function DetailPage() {
       setAllProducts(products);
 
       // Find hovedprodukt eller variant
+      // Først søges efter et produkt med matching id
       let foundProduct = products.find((p) => p.id == id);
 
+      // Hvis ikke fundet, søges efter variant (fx id = "142-v1")
       if (!foundProduct) {
         for (const p of products) {
           if (p.variants && Array.isArray(p.variants)) {
@@ -36,6 +38,7 @@ export default function DetailPage() {
               (v) => `${p.id}-${v.variantId}` === id,
             );
             if (variant) {
+              // Kombinerer hovedprodukt og variant-data
               foundProduct = {
                 ...p,
                 ...variant,
@@ -64,6 +67,7 @@ export default function DetailPage() {
     localStorage.setItem(RECENT_PRODUCTS_KEY, JSON.stringify(products)); // Gemmer listen
   }, [product]);
 
+  // Scroller til toppen når man skifter produkt (ny URL)
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
@@ -74,6 +78,7 @@ export default function DetailPage() {
   return (
     <>
       <div>
+        {/* Brødkrummenavigation */}
         <Breadcrumbs />
       </div>
       <main>
@@ -86,7 +91,7 @@ export default function DetailPage() {
           </div>
         </section>
         <section className="Relaterede-produkter">
-          {/* Karrusel med relaterede brands */}
+          {/* Karrusel med relaterede produkter */}
           <DetailRelatedProducts
             currentProduct={product}
             allProducts={allProducts}

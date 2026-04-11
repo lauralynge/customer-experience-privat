@@ -6,6 +6,7 @@ import ProductCard from "../components/ProductCard";
 import Breadcrumbs from "../components/Breadcrumbs";
 import styles from "../components/ProductGrid.module.css";
 
+// brandMap bruges til at matche slug fra URL til brandnavn i data
 const brandMap = {
   dilling: "Dilling",
   "konges-slojd": "Konges Slojd",
@@ -16,6 +17,7 @@ const brandMap = {
   wheat: "Wheat",
 };
 
+// brandTitleMap bruges til at vise pænt navn i overskrift og brødkrumme
 const brandTitleMap = {
   dilling: "Dilling",
   "konges-slojd": "Konges Sløjd",
@@ -27,19 +29,25 @@ const brandTitleMap = {
 };
 
 export default function BrandPage() {
+  // Henter brandSlug fra URL'en, fx /brand/dilling => brandSlug = "dilling"
   const { brandSlug } = useParams();
+  // products: alle produkter for det valgte brand
   const [products, setProducts] = useState([]);
 
+  // brandName bruges til at matche mod data, pageTitle til visning
   const brandName = brandMap[brandSlug];
   const pageTitle = brandTitleMap[brandSlug] || brandName;
 
+  // Brødkrumme med brandnavn
   const breadcrumbItems = [{ label: pageTitle }];
 
   useEffect(() => {
     async function fetchProducts() {
+      // Henter alle produkter fra JSON-fil
       const response = await fetch(`${import.meta.env.BASE_URL}products.json`);
       const data = await response.json();
 
+      // Filtrerer produkter så kun dem med det ønskede brand vises
       const brandProducts = data.filter(
         (product) =>
           product.brand &&
@@ -54,9 +62,12 @@ export default function BrandPage() {
 
   return (
     <section>
+      {/* Brødkrummenavigation med brandnavn */}
       <Breadcrumbs items={breadcrumbItems} />
+      {/* Overskrift med pænt brandnavn */}
       <h1>{pageTitle}</h1>
 
+      {/* Grid med alle produkter for brandet */}
       <div className={styles.productGrid}>
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />

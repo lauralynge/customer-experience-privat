@@ -7,10 +7,13 @@ import instagramikon from "../image/instagram.svg";
 
 export default function ForsideInspiration() {
   return (
+    // Hele inspirationssektionen
     <section className="forside-inspiration">
+      {/* Overskrift for sektionen */}
       <div className="forside-inspiration-tekst">
         <h3>Inspiration</h3>
       </div>
+      {/* Grid med fire inspirationsbilleder */}
       <div className="inspiration-grid">
         <div className="inspiration-card">
           <img src={inspiration1} alt="Inspiration 1" />
@@ -25,6 +28,7 @@ export default function ForsideInspiration() {
           <img src={inspiration4} alt="Inspiration 4" />
         </div>
       </div>
+      {/* Instagram-tag med ikon og tekst. Kan bruges til at linke til Instagram-profil */}
       <div className="instagramtag">
         <img src={instagramikon} alt="Instagram Tag" />
         <p>Little Looms Instagram</p>

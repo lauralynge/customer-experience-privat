@@ -1,10 +1,16 @@
-/* filepath: /Users/lauralyngenielsen/Desktop/Programmering/GitHub/customer-experience-exam/src/components/DetailRecentProducts.css */
+/*
+  Styling for DetailRecentProducts-komponenten.
+  Indeholder layout for sektion med sidst sete produkter, horisontal karrusel og kort.
+*/
+
+/* Wrapper for hele sektionen med sidst sete produkter. */
 .recentProductsSection {
   max-width: 100vw; /* Sikrer at sektionen ikke går ud over skærmen */
-  overflow-x: auto; /* Muliggør horisontal scroll */
+  overflow-x: auto; /* Muliggør horisontal scroll hvis der er mange produkter */
   margin-left: 3.5rem;
 }
 
+/* Karrusel med produkter: flexbox for horisontal layout, gap mellem kort, padding i højre side. */
 .recentProductsCarousel {
   display: flex;
   gap: 2rem;
@@ -14,17 +20,18 @@
   box-sizing: border-box;
 }
 
+/* Titel for sektionen: z-index for at sikre den ligger over evt. baggrund */
 .recentProductsTitle {
   z-index: 2;
 }
 
+/* Individuelt produktkort: fast bredde, ingen underline på tekst */
 .recentProductCard {
   flex: 0 0 auto;
   text-decoration: none !important; /* Sikrer at ingen tekst i kortet har understregning */
 }
 
+/* Skjuler scrollbar i Webkit-browsere (fx Chrome, Safari) for et renere look */
 .recentProductsCarousel::-webkit-scrollbar {
   display: none;
 }
-
-

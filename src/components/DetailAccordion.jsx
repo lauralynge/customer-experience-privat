@@ -4,8 +4,11 @@ import { useState } from "react";
 import styles from "./DetailInfoBox.module.css";
 
 export default function DetailAccordion({ product }) {
-  const [open, setOpen] = useState([0]); // Første sektion åben som default
+  // open er et array med indeks for de sektioner, der er åbne. Første sektion (0) er åben som default.
+  const [open, setOpen] = useState([0]);
 
+  // Funktion til at åbne/lukke en sektion. Hvis sektionen allerede er åben, lukkes den (fjernes fra open-arrayet).
+  // Hvis den er lukket, tilføjes dens indeks til open-arrayet, så flere sektioner kan være åbne samtidig.
   const handleToggle = (idx) => {
     setOpen(
       (prev) =>
@@ -15,6 +18,8 @@ export default function DetailAccordion({ product }) {
     );
   };
 
+  // Map med uddybende beskrivelser for forskellige materialetyper.
+  // Hvis produktets materiale findes i dette map, vises den uddybende tekst, ellers vises bare materialets navn.
   const materialDescriptions = {
     Merinould:
       "Merinould er en naturlig fiber, der er blød, temperaturregulerende og åndbar. Den er ideel til børn, da den ikke kradser og hjælper med at holde huden tør og komfortabel.",
@@ -47,6 +52,8 @@ export default function DetailAccordion({ product }) {
       "Bomulds denim er et slidstærkt og alsidigt materiale, der er perfekt til jeans og jakker.",
   };
 
+  // Array med alle sektioner i akkordeonet. Hver sektion har en titel og et indhold.
+  // Materiale-sektionen bruger materialDescriptions hvis muligt.
   const sections = [
     { title: "Beskrivelse", content: product.description },
     {
@@ -66,16 +73,20 @@ export default function DetailAccordion({ product }) {
 
   return (
     <div className={styles.accordion}>
+      {/* Mapper over alle sektioner og viser dem som fold-ud-elementer */}
       {sections.map((section, idx) => (
         <div className={styles.accordionItem} key={idx}>
+          {/* Knap til at åbne/lukke sektionen. open.includes(idx) afgør om sektionen er åben */}
           <button
             className={`${styles.accordionButton} ${open.includes(idx) ? styles.open : ""}`}
             onClick={() => handleToggle(idx)}
           >
             <h4 className={styles.accordionTitle}>{section.title}</h4>
           </button>
+          {/* Hvis sektionen er åben, vises indholdet */}
           {open.includes(idx) && (
             <div className={`${styles.accordionContent} ${styles.open}`}>
+              {/* Indholdet splittes op i sætninger og vises med linjeskift for bedre læsbarhed */}
               <p className={styles.accordionText}>
                 {section.content.split(". ").map((sentence, i) =>
                   i < section.content.split(". ").length - 1 ? (

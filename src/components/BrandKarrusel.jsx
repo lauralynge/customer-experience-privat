@@ -17,7 +17,10 @@ import img12 from "../image/minirodinicta.svg";
 import img13 from "../image/serendipityorganicscta.svg";
 import img14 from "../image/wheatcta.svg";
 
+// Brandkarrusel-komponenten viser en række populære brands med billede og link til brandsiden.
 export default function Brandkarrusel() {
+  // Array med information om hvert brand: navn, billede, call-to-action billede og slug til URL.
+  // 'slug' er en kort tekststreng, der bruges til at danne URL'en til brandets side, fx '/brand/dilling'.
   const brands = [
     { name: "Dilling", image: img1, cta: img8, slug: "dilling" },
     { name: "Konges Sløjd", image: img2, cta: img9, slug: "konges-slojd" },
@@ -39,13 +42,19 @@ export default function Brandkarrusel() {
   ];
 
   return (
+    // Sektion for brandkarrusellen
     <section className="brand-section">
       <h3>Populære brands</h3>
 
+      {/* Række med alle brandkort. Flexbox i CSS gør at de vises vandret og kan scrolles hvis nødvendigt. */}
       <div className="brand-row">
         {brands.map((brand) => (
+          // Kort for hvert brand. key={brand.name} hjælper React med at holde styr på listen.
           <div className="brand-card" key={brand.name}>
+            {/* Brandets hovedbillede */}
             <img src={brand.image} alt={brand.name} className="brand-image" />
+            {/* Link til brandets side. Indeholder et call-to-action billede (fx logo eller knap). */}
+            {/* Burde være klik på hele kortet og ikke kun knappen */}
             <Link to={`/brand/${brand.slug}`} className="brand-link">
               <img src={brand.cta} alt={brand.name} className="brand-cta" />
             </Link>

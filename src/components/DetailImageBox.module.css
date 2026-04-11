@@ -1,4 +1,9 @@
-/* Styling af stort billede */
+/*
+  Styling for DetailImageBox-komponenten.
+  Indeholder layout for hovedbillede, topbar med ikoner, variantbilleder og dot-navigation.
+*/
+
+/* Wrapper for hovedbilledet: position relative for at kunne placere topbar absolut */
 .imageWrapper {
   position: relative;
   width: 100%;
@@ -6,14 +11,14 @@
   height: auto;
 }
 
-/* Billede styling */
+/* Hovedbillede: fast bredde, højde auto for at bevare proportioner */
 .image {
   width: 25rem;
   height: auto;
   object-fit: cover;
 }
 
-/* Styling af topbar Nyhed/sale og hjerte ikon*/
+/* Topbar med nyhed/sale og hjerteikon: absolut placeret øverst, flex for at fordele ikoner */
 .topBar {
   position: absolute;
   top: 1rem;
@@ -21,29 +26,32 @@
   right: 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Ikonerne rykkes til højre */
+  justify-content: space-between; /* Ikonerne rykkes til hver sin side */
   z-index: 2;
 }
 
+/* Wrapper for hjerteikonet */
 .heartWrapper {
   display: flex;
   align-items: center;
 }
 
+/* Wrapper for venstreikoner (nyhed/sale): flex og gap */
 .leftIcons {
   display: flex;
   gap: 0.5rem;
   align-items: center;
 }
 
+/* Ens højde for nyhed, sale og hjerteikon */
 .nyhedBoks,
 .saleBoks,
 .heartIcon {
-  height: 32px; /* Ens højde */
+  height: 32px; /* Ens højde for alle ikoner */
   display: block;
 }
 
-/* imageRow styling */
+/* Række med variantbilleder: flex, horisontal scroll, gap mellem billeder */
 .imageRow {
   display: flex;
   gap: 1rem;
@@ -52,14 +60,15 @@
   box-sizing: border-box; /* Sikrer padding ikke overskrider bredden */
 }
 
+/* Variantbilleder: fleksible, fast højde, fylder tilgængelig plads */
 .variantImage {
   flex: 1 1 0;
   height: 7rem;
   object-fit: cover;
-  min-width: 0; /* Gør dem fleksible */
+  min-width: 0; /* Gør dem fleksible og undgår overflow */
 }
 
-/* Styling dotWrapper */
+/* Wrapper for dot-navigation under billedet: centreret, stor afstand mellem dots */
 .dotWrapper {
   display: flex;
   justify-content: center;
@@ -67,6 +76,7 @@
   margin: 2rem;
 }
 
+/* Dot til navigation: cirkel, farve og transition ved hover/aktiv */
 .dot {
   width: 1rem;
   height: 1rem;
@@ -76,6 +86,7 @@
   transition: background 0.2s;
 }
 
+/* Aktiv dot: mørkere farve (brun) for at vise hvilken der er valgt */
 .activeDot {
   background: var(--brun); /* fx mørkere farve for aktiv dot */
 }

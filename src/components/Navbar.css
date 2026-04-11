@@ -1,10 +1,16 @@
-/* Navigation */
+/*
+  Styling for Navbar-komponenten.
+  Indeholder layout for navigation, logo, links, ikoner og banner.
+*/
+
+/* Wrapper for hele headeren: sticky så den altid er synlig i toppen */
 .hero-header {
-  position: sticky; /*Bruges til at holde headeren fast i toppen */
+  position: sticky; /* Holder headeren fast i toppen ved scroll */
   top: 0;
-  z-index: 100; /* bruges til at være det forreste altid */
+  z-index: 100; /* Sørger for at headeren altid ligger øverst */
 }
 
+/* Top navigation: grid med 3 kolonner (logo, links, ikoner) */
 .topnav {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -13,6 +19,8 @@
   padding: 1rem 3.5rem;
   background-color: var(--hvid);
 }
+
+/* Logoet placeres til venstre */
 .logo {
   justify-self: start;
 }
@@ -20,6 +28,7 @@
   height: 4rem;
 }
 
+/* Navbar-links: centreret, spacing og display-font */
 .navbar {
   display: flex;
   justify-content: center;
@@ -28,12 +37,14 @@
   font-size: 1rem;
 }
 
+/* Links i navbar: farve, padding, ingen underline */
 .navbar a {
   color: var(--brun);
   text-decoration: none;
   padding: 2rem 1rem;
 }
 
+/* Hover-effekt og aktivt link: let skygge */
 .navbar a:hover {
   text-shadow: var(--brun) 0.06rem 0 0;
 }
@@ -42,6 +53,7 @@
   text-shadow: var(--brun) 0.06rem 0 0;
 }
 
+/* Ikoner til højre i navbar: flex, spacing og centreret */
 .klikikoner {
   display: flex;
   justify-content: flex-end;
@@ -50,10 +62,11 @@
   height: 2.5rem;
 }
 
+/* Banner under navbar: position relative for at kunne placere tekst absolut */
 .banner {
   position: relative;
   z-index: 1;
-  margin-top: -0.5rem; /*bruges til at overlappe navbar */
+  margin-top: -0.5rem; /* Overlapper navbar en smule */
 }
 
 .banner-image {
@@ -61,6 +74,7 @@
   display: block;
 }
 
+/* Tekst-overlay på banner: absolut centreret, fylder hele billedet */
 .banner-text {
   position: absolute;
   top: 0;
@@ -75,6 +89,7 @@
   padding: 0;
 }
 
+/* Tekst i banner-track: fed, centreret, fade-in animation */
 .banner-track span {
   font-weight: 600;
   font-family: var(--font-body);
@@ -83,6 +98,7 @@
   animation: fadeIn 0.5s;
 }
 
+/* Fade-in animation til bannertekst */
 @keyframes fadeIn {
   from {
     opacity: 0;
