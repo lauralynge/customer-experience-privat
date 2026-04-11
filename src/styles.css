@@ -1,5 +1,9 @@
+/*
+  Globale CSS-variabler og grundopsætning for farver, fonte og layout.
+  Bruges på tværs af hele projektet for at sikre konsistent design og nem vedligeholdelse.
+*/
 :root {
-  /*Farver*/
+  /* Farvevariabler til brug i hele appen */
   --hvid: #f6f3ee;
   --brun: #4a2f2c;
   --sekundærhvid: #e8dccd;
@@ -13,11 +17,12 @@
   --sekundærlyserød: #f6dde5;
   --sekundærgul: #f9eace;
   --strokebrun: #918482;
-  /*Fonte*/
+  /* Font-variabler for display og brødtekst */
   --font-display: "Schoolbell", cursive;
   --font-body: "Inter", sans-serif;
 }
 
+/* Nulstiller margin og sætter grundfarve og font for alle overskrifter og p-tags */
 h1,
 h2,
 h3,
@@ -40,14 +45,14 @@ body {
   line-height: 1.25;
 }
 
-/* Fonte */
-/*Desktop*/
+/* Fonte og typografi */
+/* Desktop-størrelser og fontvalg for overskrifter og .title */
 .title {
   font-family: var(--font-display); /* Schoolbell */
   font-size: 6rem; /* 96px */
   line-height: 1.25;
-  -webkit-text-stroke: 1px var(--brun);
-  text-shadow: var(--brun) 1px 1px 0;
+  -webkit-text-stroke: 1px var(--brun); /* Giver outline-effekt */
+  text-shadow: var(--brun) 1px 1px 0; /* Let skygge for kontrast */
 }
 
 h1 {
@@ -92,7 +97,7 @@ p {
   line-height: 1.25;
 }
 
-/*mobil*/
+/* Responsive typografi for mobilskærme */
 @media (max-width: 768px) {
   h1 {
     font-family: var(--font-display); /* Schoolbell */
@@ -137,9 +142,9 @@ p {
   }
 }
 
-/* Layout */
+/* Layout og utility-klasser */
 
-/* 404 */
+/* 404-side styling */
 .not-found-title {
   font-size: 5rem;
 }
@@ -166,6 +171,7 @@ p {
   background-color: var(--brun);
 }
 
+/* Forside intro og features */
 .home-intro {
   color: var(--brun);
   margin-top: 0.5rem;
@@ -184,6 +190,7 @@ p {
   padding: 1.25rem;
 }
 
+/* Kontakt-side styling */
 .contact-container {
   max-width: 760px;
 }
@@ -205,6 +212,7 @@ p {
   background: var(--sekundærhvid);
 }
 
+/* Services-side grid og kort */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -216,6 +224,7 @@ p {
   border-radius: 12px;
   background: var(--sekundærhvid);
 }
+
 /**** About page styling ****/
 
 .about-container {

@@ -1,3 +1,9 @@
+/*
+  Styling for DetailPage-komponenten.
+  Indeholder layout for main-sektion og produktdetalje-sektion.
+*/
+
+/* Main wrapper: column layout, stor afstand mellem sektioner, margin hele vejen rundt */
 main {
   display: flex;
   flex-direction: column;
@@ -6,11 +12,11 @@ main {
   margin: 3.5rem;
 }
 
+/* Produktdetalje-sektion: flex-row, centreret, stor afstand mellem billede og info */
 .product-detail {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 4rem;
   margin: 3rem auto;
-
 }

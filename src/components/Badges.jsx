@@ -4,10 +4,14 @@ import badge2 from "../image/lyseroedbadge.svg";
 import badge3 from "../image/holdbarhedbadge.svg";
 import badge4 from "../image/komfortbadge.svg";
 
+// Badges-komponenten viser fire badges med tilhørende beskrivelser på forsiden.
 export default function Badges() {
   return (
+    // Sektion der indeholder alle badges
     <section className="badges-section">
+      {/* Grid-layout for at placere badges side om side */}
       <div className="badges-grid">
+        {/* Badge 1: Naturlige materialer */}
         <div className="badge-card">
           <img
             src={badge1}
@@ -20,6 +24,7 @@ export default function Badges() {
           </p>
         </div>
 
+        {/* Badge 2: GOTS certificering */}
         <div className="badge-card">
           <img
             src={badge2}
@@ -32,6 +37,7 @@ export default function Badges() {
           </p>
         </div>
 
+        {/* Badge 3: Holdbarhed */}
         <div className="badge-card">
           <img src={badge3} alt="Holdbarhed badge" className="badge-image" />
           <p className="badge-description">
@@ -40,6 +46,7 @@ export default function Badges() {
           </p>
         </div>
 
+        {/* Badge 4: Komfort */}
         <div className="badge-card">
           <img src={badge4} alt="Komfort badge" className="badge-image" />
           <p className="badge-description">

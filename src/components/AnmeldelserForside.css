@@ -1,26 +1,33 @@
+/*
+  Styling for AnmeldelserForside-komponenten.
+  Indeholder layout for anmeldelser, kort, rating, profilbilleder og Trustpilot-link.
+*/
+
+/* Wrapper for hele anmeldelsessektionen */
 .anmeldelser-section {
   margin: 0 4rem;
   margin-bottom: 3rem;
 }
 
+/* Grid-layout til anmeldelser: 2 kolonner, stor afstand mellem kort */
 .anmeldelser-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
-  column-gap: 12.5rem;
-  row-gap: 3rem;
-
-  width: fit-content;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolonner */
+  column-gap: 12.5rem; /* Stor afstand mellem kolonner */
+  row-gap: 3rem; /* Lodret afstand mellem rækker */
+  width: fit-content; /* Grid tilpasser sig indholdets bredde */
   margin: 0 auto;
   margin-top: 3.5rem;
   margin-bottom: 3.5rem;
 }
 
+/* Individuelt anmeldelseskort med fast bredde og højde */
 .anmeldelse-card {
   width: 25rem;
   height: 9.5rem;
 }
 
+/* Topsektion i kortet: profilbillede, navn og rating på én linje */
 .anmeldelse-top {
   display: flex;
   align-items: center;
@@ -28,12 +35,14 @@
   margin-bottom: 1rem;
 }
 
+/* Profilbillede: fast størrelse og contain for at undgå forvrængning */
 .anmeldelse-profil {
   width: 3rem;
   height: 3rem;
   object-fit: contain;
 }
 
+/* Rating (stjerner): flex for at placere stjerner og evt. tal på linje */
 .anmeldelse-rating {
   display: flex;
   align-items: center;
@@ -46,6 +55,7 @@
   object-fit: contain;
 }
 
+/* Tekst i anmeldelsen: første p har ekstra margin og max bredde/højde */
 .anmeldelse-tekst p:first-child {
   margin-bottom: 1rem;
   max-width: 25rem;
@@ -56,11 +66,11 @@
   margin: 0;
 }
 
+/* Trustpilot-link: flex for at centrere tekst og logo, med afstand */
 .trustpilot-link {
   display: flex;
   justify-content: center;
   align-items: center;
-
   gap: 1rem;
 }
 
@@ -77,10 +87,10 @@
   object-fit: contain;
 }
 
+/* Trustpilot-logo: flex for at placere logo og evt. tekst på linje */
 .trustpilot-logo {
   display: flex;
   justify-content: center;
   align-items: center;
-
   gap: 0.5rem;
 }

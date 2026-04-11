@@ -1,28 +1,38 @@
+/*
+  Styling for Footer-komponenten.
+  Indeholder layout for footer-wrapper, kolonner, links, sprogvalg, sociale medier og betalingsikoner.
+*/
+
+/* Wrapper for hele siden inkl. footer. Gør det muligt at placere footer i bunden. */
 .footer-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+/* Selve footeren: mørk baggrund, hvid tekst, padding og minimumshøjde. */
 .footer {
   background-color: var(--brun);
   color: var(--hvid);
   padding: 4rem 5rem 3rem;
   min-height: 320px;
-  margin-top: auto;
+  margin-top: auto; /* Skubber footeren til bunden hvis der er lidt indhold */
 }
 
+/* Ens styling for tekst og links i footeren */
 .footer h4,
 .footer p,
 .footer a {
   color: var(--hvid);
 }
 
+/* Topsektion i footeren: grid med 5 kolonner */
 .footer-top {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
 
+/* En kolonne i footeren: column layout, spacing og højre border */
 .footer-kolonne {
   display: flex;
   flex-direction: column;
@@ -31,6 +41,7 @@
   border-right: 1px solid var(--hvid);
 }
 
+/* Sidste kolonne har ingen højre border */
 .footer-kolonne:last-child {
   border-right: none;
 }
@@ -39,6 +50,7 @@
   margin-bottom: 1rem;
 }
 
+/* Links i footeren: ingen underline, fontvalg, hover-effekt */
 .footer-kolonne a {
   text-decoration: none;
   font-size: 1rem;
@@ -49,6 +61,7 @@
   text-decoration: underline;
 }
 
+/* Bundsektion i footeren: centreret, spacing mellem elementer */
 .footer-bund {
   margin-top: 5rem;
   display: flex;
@@ -57,6 +70,7 @@
   gap: 2.5rem;
 }
 
+/* Sprogvalg: flex-row, spacing mellem flag og tekst */
 .footer-sprog {
   display: flex;
   align-items: center;
@@ -68,6 +82,7 @@
   height: 2.5rem;
 }
 
+/* Sociale medier: flex-row, spacing mellem ikoner */
 .footer-socialemedier {
   display: flex;
   gap: 2.5rem;
@@ -79,6 +94,7 @@
   cursor: pointer;
 }
 
+/* Betalingsikoner: flex-row, wrap hvis nødvendigt, centreret */
 .footer-betalinger {
   display: flex;
   gap: 1rem;
