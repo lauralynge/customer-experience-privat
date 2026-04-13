@@ -29,6 +29,14 @@ export default function ProductGridGirls() {
       const url = `${import.meta.env.BASE_URL}products.json`;
       const response = await fetch(url);
       const data = await response.json();
+      // Filtrer kun piger-produkter
+      const girlsProducts = data.filter((product) => product.gender === "pige");
+      setProducts(girlsProducts);
+      setSelectedCategory("all");
+      setActiveFilters(createEmptyFilters());
+      setDraftFilters(createEmptyFilters());
+
+      // Flad listen ud, så hver variant bliver et produktkort
       // Først: flad listen ud, så hver variant bliver et produktkort
       // Dette sikrer at alle varianter (fx farver/størrelser) vises som individuelle kort
       const allProducts = data.flatMap((product) => {
@@ -60,10 +68,10 @@ export default function ProductGridGirls() {
       // Dette sikrer at produkter, der er markeret som "Unisex" eller har flere køn, også vises
       const girlsAndUnisex = allProducts.filter(
         (product) =>
-          product.gender === "Pige" ||
-          product.gender === "Unisex" ||
-          (Array.isArray(product.gender) && product.gender.includes("Pige")) ||
-          (Array.isArray(product.gender) && product.gender.includes("Unisex")),
+          product.gender === "pige" ||
+          product.gender === "unisex" ||
+          (Array.isArray(product.gender) && product.gender.includes("pige")) ||
+          (Array.isArray(product.gender) && product.gender.includes("unisex")),
       );
 
       setProducts(girlsAndUnisex);

@@ -60,7 +60,8 @@ export default function ProductGridBaby() {
 
       // Filtrér på gender EFTER flatten, så kun baby-produkter vises
       const babyProducts = allProducts.filter(
-        (product) => product.gender === "Baby",
+        (product) =>
+          Array.isArray(product.gender) && product.gender.includes("baby"),
       );
 
       setProducts(babyProducts);
