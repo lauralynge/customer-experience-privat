@@ -7,17 +7,22 @@ import kryds from "../image/kryds.svg";
 
 export default function PigeDropdown({ onClose }) {
   return (
+    // Overlay der dækker hele skærmen. Klik på baggrunden lukker menuen (onClose)
     <div className="dropdown-overlay" onClick={onClose}>
+      {/* Selve dropdown-menuen. Klik på denne stopper eventen, så overlayet ikke lukkes */}
       <div
         className="kategoridropdown"
-        onClick={(e) => e.stopPropagation()}
+        onClick={(e) => e.stopPropagation()} // Forhindrer at klik bobler op og lukker overlayet
         style={{ backgroundImage: `url(${dropdownbaggrund})` }}
       >
+        {/* Knap til at lukke dropdown-menuen */}
         <button className="dropdown-close" onClick={onClose}>
           <img src={kryds} alt="Luk" />
         </button>
 
+        {/* Grid-layout med kolonner for hver underkategori */}
         <div className="dropdown-grid">
+          {/* Kolonne: Overtøj */}
           <div className="dropdown-column">
             <NavLink
               to="/kategori/baby/overtoj"
@@ -26,6 +31,7 @@ export default function PigeDropdown({ onClose }) {
             >
               Overtøj
             </NavLink>
+            {/* Underkategorier til overtøj */}
             <NavLink to="/kategori/pige/overtoj/flyverdragt" onClick={onClose}>
               Flyverdragt
             </NavLink>
@@ -46,6 +52,7 @@ export default function PigeDropdown({ onClose }) {
             </NavLink>
           </div>
 
+          {/* Kolonne: Overdele */}
           <div className="dropdown-column">
             <NavLink
               to="/kategori/baby/overdele"
@@ -54,6 +61,7 @@ export default function PigeDropdown({ onClose }) {
             >
               Overdele
             </NavLink>
+            {/* Underkategorier til overdele */}
             <NavLink to="/kategori/pige/overdele/strik" onClick={onClose}>
               Strik
             </NavLink>
@@ -71,6 +79,7 @@ export default function PigeDropdown({ onClose }) {
             </NavLink>
           </div>
 
+          {/* Kolonne: Accessories */}
           <div className="dropdown-column">
             <NavLink
               to="/kategori/baby/accessories"
@@ -79,6 +88,7 @@ export default function PigeDropdown({ onClose }) {
             >
               Accessories
             </NavLink>
+            {/* Underkategorier til accessories */}
             <NavLink to="/kategori/pige/accessories/stromper" onClick={onClose}>
               Strømper
             </NavLink>
@@ -93,6 +103,7 @@ export default function PigeDropdown({ onClose }) {
             </NavLink>
           </div>
 
+          {/* Kolonne: Underdele */}
           <div className="dropdown-column">
             <NavLink
               to="/kategori/baby/underdele"
@@ -101,6 +112,7 @@ export default function PigeDropdown({ onClose }) {
             >
               Underdele
             </NavLink>
+            {/* Underkategorier til underdele */}
             <NavLink to="/kategori/pige/underdele/shorts" onClick={onClose}>
               Shorts
             </NavLink>
@@ -121,6 +133,7 @@ export default function PigeDropdown({ onClose }) {
             </NavLink>
           </div>
 
+          {/* Kolonne: Fodtøj */}
           <div className="dropdown-column">
             <NavLink
               to="/kategori/baby/fodtoj"
@@ -129,6 +142,7 @@ export default function PigeDropdown({ onClose }) {
             >
               Fodtøj
             </NavLink>
+            {/* Underkategorier til fodtøj */}
             <NavLink to="/kategori/pige/fodtoj/sko" onClick={onClose}>
               Sko
             </NavLink>
@@ -143,6 +157,7 @@ export default function PigeDropdown({ onClose }) {
             </NavLink>
           </div>
 
+          {/* Kolonne: Undertøj & nattøj, Udsalg, Nyheder */}
           <div className="dropdown-column">
             <NavLink
               to="/kategori/baby/undertojognattoj"

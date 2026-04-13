@@ -1,27 +1,37 @@
+/*
+  Styling for DetailRelatedProducts-komponenten.
+  Indeholder layout for sektion med relaterede produkter, horisontal karrusel og kort.
+*/
+
+/* Wrapper for hele sektionen med relaterede produkter. */
 .relatedProductsSection {
-  max-width: 100vw;
-  overflow-x: auto;
+  max-width: 100vw; /* Sikrer at sektionen ikke går ud over skærmen */
+  overflow-x: auto; /* Muliggør horisontal scroll hvis der er mange produkter */
   margin-left: 3.5rem;
 }
 
+/* Karrusel med produkter: flexbox for horisontal layout, gap mellem kort, padding i højre side. */
 .relatedProductsCarousel {
   display: flex;
   gap: 2rem;
   margin-top: 1rem;
-  min-width: fit-content;
+  min-width: fit-content; /* Gør at indholdet kan være bredere end containeren */
   padding-right: 3.5rem;
   box-sizing: border-box;
 }
 
+/* Header for sektionen: z-index for at sikre den ligger over evt. baggrund */
 .relatedProductsHeader {
   z-index: 2;
 }
 
+/* Individuelt produktkort: fast bredde, ingen underline på tekst */
 .relatedProductCard {
   flex: 0 0 auto;
   text-decoration: none !important; /* Sikrer at ingen tekst i kortet har understregning */
 }
 
+/* Skjuler scrollbar i Webkit-browsere (fx Chrome, Safari) for et renere look */
 .relatedProductsCarousel::-webkit-scrollbar {
   display: none;
 }

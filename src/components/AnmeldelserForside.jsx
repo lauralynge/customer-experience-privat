@@ -1,18 +1,24 @@
-// Kundeanmeldelser til forsiden – viser et grid med fire kundeanmeldelser inkl. profilikon og stjernebedømmelse.
-import fyldtprofilikon from "../image/anmeldelserprofil.svg";
-import fyldtstjerneikon from "../image/anmeldelserstjernefyldt.svg";
-import trustpilotstjerne from "../image/trustpilotstjerne.svg";
-import "./AnmeldelserForside.css";
+// Importerer SVG-ikoner til brug i anmeldelserne
+import fyldtprofilikon from "../image/anmeldelserprofil.svg"; // Profilikon til brugeranmeldelser
+import fyldtstjerneikon from "../image/anmeldelserstjernefyldt.svg"; // Stjerneikon til ratings
+import trustpilotstjerne from "../image/trustpilotstjerne.svg"; // Trustpilot-logo
+import "./AnmeldelserForside.css"; // Importerer CSS for styling af komponenten
 
+// Komponenten viser et grid med fire kundeanmeldelser på forsiden
 export default function AnmeldelserForside() {
   return (
     <div className="anmeldelser-section">
+      {/* Overskrift for anmeldelses-sektionen */}
       <h3>Hvad vores kunder mener</h3>
 
+      {/* Grid med fire kundeanmeldelser */}
       <div className="anmeldelser-grid">
+        {/* Første anmeldelse */}
         <div className="anmeldelse-card">
           <div className="anmeldelse-top">
+            {/* Profilikon */}
             <img src={fyldtprofilikon} alt="Profil1" />
+            {/* Stjerne-rating */}
             <div className="rating">
               <img src={fyldtstjerneikon} alt="Stjerne" />
               <img src={fyldtstjerneikon} alt="Stjerne" />
@@ -22,6 +28,7 @@ export default function AnmeldelserForside() {
             </div>
           </div>
           <div className="anmeldelse-tekst">
+            {/* Selve anmeldelsesteksten */}
             <p>
               “Jeg er virkelig glad for at have fundet Little Looms. Tøjet er så
               fint og i virkelig god kvalitet. Jeg kan især godt lide de
@@ -32,6 +39,7 @@ export default function AnmeldelserForside() {
           </div>
         </div>
 
+        {/* Anden anmeldelse */}
         <div className="anmeldelse-card">
           <div className="anmeldelse-top">
             <img src={fyldtprofilikon} alt="Profil2t" />
@@ -54,6 +62,7 @@ export default function AnmeldelserForside() {
           </div>
         </div>
 
+        {/* Tredje anmeldelse */}
         <div className="anmeldelse-card">
           <div className="anmeldelse-top">
             <img src={fyldtprofilikon} alt="Profil3" />
@@ -76,6 +85,7 @@ export default function AnmeldelserForside() {
           </div>
         </div>
 
+        {/* Fjerde anmeldelse */}
         <div className="anmeldelse-card">
           <div className="anmeldelse-top">
             <img src={fyldtprofilikon} alt="Profil4" />
@@ -98,9 +108,13 @@ export default function AnmeldelserForside() {
           </div>
         </div>
       </div>
+
+      {/* Link til at se alle anmeldelser på Trustpilot */}
       <div className="trustpilot-link">
         <p>Vis alle 15.764 anmeldelser</p>
       </div>
+
+      {/* Trustpilot-logo og tekst */}
       <div className="trustpilot-logo">
         <img src={trustpilotstjerne} alt="Trustpilot Stjerner" />
         <p>Trustpilot</p>

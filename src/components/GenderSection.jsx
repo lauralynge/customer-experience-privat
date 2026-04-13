@@ -9,14 +9,18 @@ import pigestr from "../image/pigekoen.svg";
 
 export default function GenderSection() {
   return (
+    // Grid med tre kort – ét for hver kønskategori
     <div className="gender-grid">
+      {/* Kort for baby-kategorien */}
       <div className="gender-card">
         <img src={baby} alt="Baby" />
+        {/* Link til baby-kategorien. Indeholder et overlay-billede med tekst/grafik */}
         <Link to="/baby" className="gender-link">
           <img src={babystr} alt="Babystr" />
         </Link>
       </div>
 
+      {/* Kort for pige-kategorien */}
       <div className="gender-card">
         <img src={pige} alt="Pige" />
         <Link to="/pige" className="gender-link">
@@ -24,6 +28,7 @@ export default function GenderSection() {
         </Link>
       </div>
 
+      {/* Kort for dreng-kategorien */}
       <div className="gender-card">
         <img src={dreng} alt="Dreng" />
         <Link to="/dreng" className="gender-link">

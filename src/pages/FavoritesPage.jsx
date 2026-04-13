@@ -10,6 +10,7 @@ import saleIcon from "../image/sale-ikon.svg";
 import HeartIcon from "../components/HeartIcon";
 import { withBase } from "../utils/productFilters";
 
+// Hardkodet liste over favoritprodukter (kan udskiftes med localStorage senere)
 const initialFavorites = [
   {
     id: 1,
@@ -67,6 +68,7 @@ const initialFavorites = [
   },
 ];
 
+// Ikon til deling af favoritter
 function ShareIcon() {
   return (
     <svg
@@ -90,24 +92,33 @@ function ShareIcon() {
 export default function FavoritesPage() {
   const navigate = useNavigate();
   const location = useLocation();
+  // State: nuværende favoritter
   const [favorites, setFavorites] = useState(initialFavorites);
+  // State: fjernede favoritter (bruges til fortryd)
   const [removedFavorites, setRemovedFavorites] = useState({});
+  // State: id på det kort der er hovered (for at vise størrelsesvælger)
   const [hoveredCard, setHoveredCard] = useState(null);
+  // State: valgt størrelse for hvert produkt (objekt: { produktId: størrelse })
   const [selectedSizes, setSelectedSizes] = useState({});
+  // State: styrer "Lagt i kurv"-feedback for hvert produkt
   const [addedToCart, setAddedToCart] = useState({});
 
+  // Fjerner et produkt fra favoritter (og gemmer det i removedFavorites så det kan fortrydes)
   const removeFavorite = (id) => {
+    // Find produktet der skal fjernes
     const product = favorites.find((p) => p.id === id);
     if (!product) return;
-
+    // Gem produktet i removedFavorites
     setRemovedFavorites((prev) => ({ ...prev, [id]: product }));
+    // Fjern produktet fra favoritter
     setFavorites((prev) => prev.filter((p) => p.id !== id));
   };
 
+  // Fortryder fjernelse af et favoritprodukt
   const undoRemove = (id) => {
     const product = removedFavorites[id];
     if (!product) return;
-
+    // Tilføj produktet tilbage til favoritter og sorter så rækkefølgen bevares
     setFavorites((prev) => {
       const updated = [...prev, product];
       updated.sort(
@@ -117,7 +128,7 @@ export default function FavoritesPage() {
       );
       return updated;
     });
-
+    // Fjern produktet fra removedFavorites
     setRemovedFavorites((prev) => {
       const next = { ...prev };
       delete next[id];
@@ -125,14 +136,16 @@ export default function FavoritesPage() {
     });
   };
 
+  // Vælger størrelse for et produkt (opdaterer selectedSizes)
   const selectSize = (id, size) => {
     setSelectedSizes((prev) => ({ ...prev, [id]: size }));
   };
 
+  // Lægger ét produkt i kurven (kræver at størrelse er valgt)
   const addToCart = (product) => {
     const size = selectedSizes[product.id];
-    if (!size) return;
-
+    if (!size) return; // Gør intet hvis ingen størrelse valgt
+    // Tilføj produktet til kurven (shoppingbag)
     addShoppingbagItem({
       id: `${product.id}-${size}`,
       baseId: product.id,
@@ -142,24 +155,26 @@ export default function FavoritesPage() {
       quantity: 1,
       image: product.image,
     });
-
+    // Vis "Lagt i kurv"-feedback
     setAddedToCart((prev) => ({ ...prev, [product.id]: true }));
+    // Naviger til kurv-side (overlay)
     navigate("/shoppingbag", { state: { backgroundLocation: location } });
+    // Fjern feedback efter 2 sekunder
     setTimeout(() => {
       setAddedToCart((prev) => ({ ...prev, [product.id]: false }));
     }, 2000);
   };
 
+  // Lægger alle favoritter i kurven (vælger første størrelse hvis ingen valgt)
   const addAllToCart = () => {
     if (favorites.length === 0) return;
-
     const addedIds = [];
     const inferredSizes = {};
-
+    // Gennemgå alle favoritter
     favorites.forEach((product) => {
+      // Brug valgt størrelse eller første mulige
       const size = selectedSizes[product.id] || product.sizes?.[0];
-      if (!size) return;
-
+      if (!size) return; // Spring over hvis ingen størrelse
       addShoppingbagItem({
         id: `${product.id}-${size}`,
         baseId: product.id,
@@ -169,22 +184,20 @@ export default function FavoritesPage() {
         quantity: 1,
         image: product.image,
       });
-
+      // Hvis brugeren ikke selv har valgt størrelse, gem hvilken der blev brugt
       if (!selectedSizes[product.id]) {
         inferredSizes[product.id] = size;
       }
-
       addedIds.push(product.id);
     });
-
     if (addedIds.length === 0) return;
-
+    // Naviger til kurv-side (overlay)
     navigate("/shoppingbag", { state: { backgroundLocation: location } });
-
+    // Opdater selectedSizes hvis der blev valgt størrelser automatisk
     if (Object.keys(inferredSizes).length > 0) {
       setSelectedSizes((prev) => ({ ...prev, ...inferredSizes }));
     }
-
+    // Vis "Lagt i kurv"-feedback for alle produkter
     setAddedToCart((prev) => {
       const next = { ...prev };
       addedIds.forEach((id) => {
@@ -192,7 +205,7 @@ export default function FavoritesPage() {
       });
       return next;
     });
-
+    // Fjern feedback efter 2 sekunder
     setTimeout(() => {
       setAddedToCart((prev) => {
         const next = { ...prev };
@@ -207,13 +220,16 @@ export default function FavoritesPage() {
   return (
     <main className="favorite-page">
       <section className="favorite-content">
+        {/* Brødkrummenavigation */}
         <Breadcrumbs />
 
         <header className="favorite-header">
           <h2>Mine Favoritter</h2>
+          {/* Viser antal favoritter */}
           <p>{favorites.length} artikler</p>
         </header>
 
+        {/* Login-boks for at gemme favoritter (kun visning, ingen funktionalitet) */}
         <section
           className="favorite-login-box"
           aria-label="Login for favoritter"
@@ -223,17 +239,21 @@ export default function FavoritesPage() {
           <button type="button">OPRET / LOG IND</button>
         </section>
 
+        {/* Del-funktion (kun ikon og tekst) */}
         <section className="favorite-share" aria-label="Del favoritter">
           <p>Del dine favoritter</p>
           <ShareIcon />
         </section>
 
+        {/* Grid med alle favorit-produkter */}
         <section className="favorite-grid" aria-label="Favorit produkter">
+          {/* Gennemgår alle produkter i initialFavorites for at bevare rækkefølge og undo-funktion */}
           {initialFavorites.map((product) => {
+            // Tjek om produktet stadig er i favoritter
             const activeProduct = favorites.find((p) => p.id === product.id);
             if (!activeProduct) {
+              // Hvis produktet er fjernet, vis fortryd-knap hvis muligt
               if (!removedFavorites[product.id]) return null;
-
               return (
                 <div key={`undo-${product.id}`} className="favorite-undo-tile">
                   <button
@@ -246,9 +266,8 @@ export default function FavoritesPage() {
                 </div>
               );
             }
-
+            // Viser størrelsesvælger når kortet er hovered
             const isSizeOpen = hoveredCard === product.id;
-
             return (
               <article
                 key={activeProduct.id}
@@ -259,6 +278,7 @@ export default function FavoritesPage() {
                 <div className="favorite-image-wrap">
                   <div className="favorite-top-bar">
                     <div className="favorite-left-icons">
+                      {/* Nyhed- og sale-ikoner */}
                       {activeProduct.news && (
                         <img
                           src={nyhedIcon}
@@ -275,6 +295,7 @@ export default function FavoritesPage() {
                       )}
                     </div>
                   </div>
+                  {/* Hjerte-ikon til at fjerne fra favoritter */}
                   <button
                     type="button"
                     aria-label={`Fjern ${activeProduct.name} fra favoritter`}
@@ -285,6 +306,7 @@ export default function FavoritesPage() {
                       onToggle={() => removeFavorite(activeProduct.id)}
                     />
                   </button>
+                  {/* Produktbillede */}
                   <img
                     src={activeProduct.image}
                     alt={activeProduct.name}
@@ -293,7 +315,9 @@ export default function FavoritesPage() {
                 </div>
 
                 <div className="favorite-card-body">
+                  {/* Produktnavn */}
                   <h3>{activeProduct.name}</h3>
+                  {/* Pris, evt. med sale-style */}
                   <p
                     className={
                       activeProduct.sale ? "favorite-price-sale" : undefined
@@ -303,6 +327,7 @@ export default function FavoritesPage() {
                   </p>
                 </div>
 
+                {/* Størrelsesvælger (vises kun når kortet er hovered) */}
                 <div className="favorite-size-wrap">
                   <p className="favorite-size-label">
                     {selectedSizes[activeProduct.id]
@@ -329,6 +354,7 @@ export default function FavoritesPage() {
                   )}
                 </div>
 
+                {/* Læg i kurv-knap. Disabled hvis ingen størrelse valgt. Viser feedback hvis lagt i kurv. */}
                 <button
                   type="button"
                   className={`favorite-cart-btn ${!selectedSizes[activeProduct.id] ? "disabled" : ""}`}
@@ -344,6 +370,7 @@ export default function FavoritesPage() {
           })}
         </section>
 
+        {/* Knap til at lægge alle favoritter i kurven */}
         <div className="favorite-bulk-wrap">
           <button
             type="button"

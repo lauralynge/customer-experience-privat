@@ -1,9 +1,15 @@
+/*
+  Styling for Breadcrumbs-komponenten.
+  Indeholder layout for brødkrummesti, links og separator.
+*/
+
+/* Wrapper for hele brødkrummestien: flex for horisontal layout, venstrejusteret, gap mellem elementer */
 .breadcrumbs {
   display: flex;
   align-items: center;
   font-size: 1rem;
   color: var(--brun);
-  gap: 0.5rem;
+  gap: 0.5rem; /* Afstand mellem links og separatorer */
   border: none;
   box-shadow: none;
   background: none;
@@ -13,19 +19,21 @@
   margin-top: 2rem;
   font-family: var(--font-body);
 }
-/* Forside */
+
+/* Første link (typisk forsiden): ingen underline, men samme farve */
 .breadcrumbs a:first-child {
   color: var(--brun);
   text-decoration: none;
 }
 
-/* Alle andre links */
+/* Alle andre links: underline for at indikere klikbarhed */
 .breadcrumbs a:not(:first-child) {
   color: var(--brun);
   text-decoration: underline;
 }
-/* den der sepererer mellem hver tekst/crumb*/
+
+/* Separator mellem brødkrummer (fx / eller >) */
 .crumbSep {
-  font-size: 1rem 1rem;
+  font-size: 1rem 1rem; /* Kan evt. rettes til kun én værdi, men har ingen effekt her */
   color: var(--brun);
 }

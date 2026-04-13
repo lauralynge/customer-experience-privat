@@ -5,19 +5,26 @@ import "./Dropdown.css";
 import dropdownbaggrund from "../image/kategoribabydropdown.svg";
 import kryds from "../image/kryds.svg";
 
+// BabyDropdown-komponenten viser en dropdown-menu med underkategorier til baby-sektionen.
+// onClose-proppen bruges til at lukke menuen, enten ved klik på baggrunden eller på krydset.
 export default function BabyDropdown({ onClose }) {
   return (
+    // Overlay der dækker hele skærmen. Klik på overlayet (uden for menuen) lukker dropdown.
     <div className="dropdown-overlay" onClick={onClose}>
+      {/* Selve dropdown-menuen. onClick med stopPropagation forhindrer at klik inde i menuen lukker overlayet. */}
       <div
         className="kategoridropdown"
         onClick={(e) => e.stopPropagation()}
-        style={{ backgroundImage: `url(${dropdownbaggrund})` }}
+        style={{ backgroundImage: `url(${dropdownbaggrund})` }} // Baggrundsbillede for menuen
       >
+        {/* Luk-knap (øverste højre hjørne). Klik lukker dropdown. */}
         <button className="dropdown-close" onClick={onClose}>
           <img src={kryds} alt="Luk" />
         </button>
 
+        {/* Grid-layout med 6 kolonner, én for hver hovedkategori. */}
         <div className="dropdown-grid">
+          {/* Kolonne: Overtøj. NavLink bruges for at kunne style aktivt link og for at undgå fuld reload. */}
           <div className="dropdown-column">
             <NavLink
               to="/kategori/baby/overtoj"
@@ -26,6 +33,7 @@ export default function BabyDropdown({ onClose }) {
             >
               Overtøj
             </NavLink>
+            {/* Underkategorier til overtøj. onClick={onClose} lukker dropdown ved navigation. */}
             <NavLink to="/kategori/baby/overtoj/flyverdragt" onClick={onClose}>
               Flyverdragt
             </NavLink>
@@ -46,6 +54,7 @@ export default function BabyDropdown({ onClose }) {
             </NavLink>
           </div>
 
+          {/* Kolonne: Overdele */}
           <div className="dropdown-column">
             <NavLink
               to="/kategori/baby/overdele"
@@ -54,6 +63,7 @@ export default function BabyDropdown({ onClose }) {
             >
               Overdele
             </NavLink>
+            {/* Underkategorier til overdele */}
             <NavLink to="/kategori/baby/overdele/strik" onClick={onClose}>
               Strik
             </NavLink>
@@ -74,6 +84,7 @@ export default function BabyDropdown({ onClose }) {
             </NavLink>
           </div>
 
+          {/* Kolonne: Accessories */}
           <div className="dropdown-column">
             <NavLink
               to="/kategori/baby/accessories"
@@ -82,6 +93,7 @@ export default function BabyDropdown({ onClose }) {
             >
               Accessories
             </NavLink>
+            {/* Underkategorier til accessories */}
             <NavLink to="/kategori/baby/accessories/stromper" onClick={onClose}>
               Strømper
             </NavLink>
@@ -96,6 +108,7 @@ export default function BabyDropdown({ onClose }) {
             </NavLink>
           </div>
 
+          {/* Kolonne: Underdele */}
           <div className="dropdown-column">
             <NavLink
               to="/kategori/baby/underdele"
@@ -104,6 +117,7 @@ export default function BabyDropdown({ onClose }) {
             >
               Underdele
             </NavLink>
+            {/* Underkategorier til underdele */}
             <NavLink to="/kategori/baby/underdele/shorts" onClick={onClose}>
               Shorts
             </NavLink>
@@ -121,6 +135,7 @@ export default function BabyDropdown({ onClose }) {
             </NavLink>
           </div>
 
+          {/* Kolonne: Fodtøj */}
           <div className="dropdown-column">
             <NavLink
               to="/kategori/baby/fodtoj"
@@ -129,6 +144,7 @@ export default function BabyDropdown({ onClose }) {
             >
               Fodtøj
             </NavLink>
+            {/* Underkategorier til fodtøj */}
             <NavLink to="/kategori/baby/fodtoj/sko" onClick={onClose}>
               Sko
             </NavLink>
@@ -143,6 +159,7 @@ export default function BabyDropdown({ onClose }) {
             </NavLink>
           </div>
 
+          {/* Kolonne: Undertøj & nattøj, Udsalg, Nyheder. Her bruges kun hovedlinks. */}
           <div className="dropdown-column">
             <NavLink
               to="/kategori/baby/undertojognattoj"
@@ -158,7 +175,6 @@ export default function BabyDropdown({ onClose }) {
             >
               Udsalg
             </NavLink>
-
             <NavLink
               to="/kategori/baby/nyheder"
               onClick={onClose}

@@ -1,32 +1,42 @@
+/*
+  Styling for BrandKarrusel-komponenten.
+  Indeholder layout for brand-sektion, horisontal scroll, kort og CTA-overlay.
+*/
+
+/* Wrapper for hele brand-sektionen. Giver venstremargin for at tilpasse layoutet. */
 .brand-section {
   margin-left: 3.5rem;
 }
 
+/* Række med brands: flexbox for horisontal layout og gap mellem kort. */
 .brand-row {
-  display: flex;
-  gap: 2rem;
-  overflow-x: auto;
+  display: flex; /* Lægger kortene på række */
+  gap: 2rem; /* Afstand mellem hvert brandkort */
+  overflow-x: auto; /* Gør det muligt at scrolle horisontalt hvis der er for mange kort */
   margin-top: 0.5rem;
 }
 
+/* Individuelt brandkort: fast bredde, ingen shrink/grow, position relative for overlay. */
 .brand-card {
-  position: relative;
-  flex: 0 0 auto;
+  position: relative; /* Gør det muligt at placere CTA absolut inde i kortet */
+  flex: 0 0 auto; /* Kortet har fast bredde og shrinker ikke */
   width: 18rem;
 }
 
+/* Brandbillede: fylder hele kortet, beskæres hvis nødvendigt. */
 .brand-image {
   width: 18rem;
   height: 31rem;
-  object-fit: cover;
+  object-fit: cover; /* Billedet beskæres så det fylder hele arealet uden forvrængning */
   display: block;
 }
+
+/* CTA-overlay: placeres absolut i midten af kortet, fylder 80% af bredden. */
 .brand-cta {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-
+  transform: translate(-50%, -50%); /* Centrerer CTA både lodret og vandret */
   width: 80%;
   height: auto;
 }

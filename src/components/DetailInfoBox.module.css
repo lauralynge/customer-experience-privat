@@ -1,3 +1,9 @@
+/*
+  Styling for DetailInfoBox-komponenten.
+  Indeholder layout for infoboks, pris, størrelses- og farvevælger, lagerinfo, leveringsinfo og accordion.
+*/
+
+/* Infoboks: fast bredde, column layout, afstand mellem sektioner */
 .infoBox {
   width: 30rem; /* justerer bredden på infoboksen */
   height: fill-content;
@@ -6,6 +12,7 @@
   gap: 1rem; /* eller ønsket afstand */
 }
 
+/* Add-to-cart sektion: centrerer indhold og knap */
 .infoBox .add-to-cart {
   display: flex;
   flex-direction: column;
@@ -13,6 +20,7 @@
   gap: 1rem; /* eller ønsket afstand */
 }
 
+/* Add-to-cart knap: ingen baggrund/border, kun ikon */
 .add-to-cart {
   background: none;
   border: none;
@@ -25,7 +33,7 @@
   height: auto;
 }
 
-/* Styling af pris */
+/* Prisrække: pris og evt. førpris på linje, med afstand */
 .priceRow {
   display: flex;
   justify-content: space-between;
@@ -44,7 +52,7 @@
   font-size: 1rem;
 }
 
-/* Styling af Size Selector */
+/* Størrelsesvælger: column layout, afstand, fylder hele bredden */
 .size-selection {
   width: 100%;
   flex: 1;
@@ -65,6 +73,7 @@
   text-decoration: underline;
 }
 
+/* Grid med størrelsescirkler: wrap, gap og auto-fit kolonner */
 .sizeGrid {
   display: flex;
   flex-wrap: wrap;
@@ -74,6 +83,7 @@
   grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
 }
 
+/* Størrelsescirkel: rund, centreret tekst, hover/selected styling */
 .sizeCircle {
   width: 3rem;
   height: 3rem;
@@ -90,6 +100,7 @@
   background: var(--brun);
 }
 
+/* Ikke-tilgængelig størrelse: lavere opacity, ingen pointer-events */
 .sizeUnavailable {
   opacity: 0.5;
   border: 1px var(--brun);
@@ -97,6 +108,7 @@
   pointer-events: none;
 }
 
+/* Streg igennem for udsolgte størrelser */
 .strikeThrough {
   position: absolute;
   width: 3rem;
@@ -106,18 +118,20 @@
   transform: rotate(-45deg);
 }
 
+/* Valgt størrelse: mørk baggrund */
 .sizeSelected {
   background-color: var(--brun);
   color: var(--brun);
 }
 
-/* Styling af lagerinformation */
+/* Lagerinformation: flex, ikon og tekst på linje */
 .stockInfo {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
+/* Lagerstatus-dot: grøn cirkel */
 .stockDot {
   display: inline-block;
   width: 10px;
@@ -128,7 +142,7 @@
   vertical-align: middle;
 }
 
-/* Styling af farvevalg */
+/* Farvevælger: margin og flex-row for farvecirkler */
 .color-selection {
   margin-bottom: 1rem;
 }
@@ -140,6 +154,7 @@
   margin-left: 0;
 }
 
+/* Farvecirkel: rund, klikbar, border ved hover/selected */
 .colorCircle {
   width: 3rem;
   height: 3rem;
@@ -152,7 +167,7 @@
   border: 2px solid var(--brun);
 }
 
-/* Styling af leveringsinformation */
+/* Leveringsinfo: column layout, ikon og tekst på linje */
 .deliveryInfo {
   display: flex;
   flex-direction: column;
@@ -166,7 +181,7 @@
   gap: 0.5rem; /* Lidt luft mellem ikon og tekst */
 }
 
-/* Styling af accordion */
+/* Accordion med ekstra info: margin og styling af knapper/indhold */
 .additionalInfo {
   margin-top: 1rem;
 }
@@ -179,6 +194,7 @@
   display: block;
   margin-bottom: 1rem; /* Justér efter behov */
 }
+
 .accordionItem {
   margin-bottom: 1rem;
 }
