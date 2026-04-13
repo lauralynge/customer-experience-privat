@@ -50,15 +50,15 @@ export default function Brandkarrusel() {
       <div className="brand-row">
         {brands.map((brand) => (
           // Kort for hvert brand. key={brand.name} hjælper React med at holde styr på listen.
-          <div className="brand-card" key={brand.name}>
-            {/* Brandets hovedbillede */}
-            <img src={brand.image} alt={brand.name} className="brand-image" />
-            {/* Link til brandets side. Indeholder et call-to-action billede (fx logo eller knap). */}
-            {/* Burde være klik på hele kortet og ikke kun knappen */}
-            <Link to={`/brand/${brand.slug}`} className="brand-link">
+          <Link to={`/brand/${brand.slug}`} className="brand-link">
+            <div className="brand-card" key={brand.name}>
+              {/* Brandets hovedbillede */}
+              <img src={brand.image} alt={brand.name} className="brand-image" />
+              {/* Link til brandets side. Indeholder et call-to-action billede (fx logo eller knap). */}
+              {/* Burde være klik på hele kortet og ikke kun knappen */}
               <img src={brand.cta} alt={brand.name} className="brand-cta" />
-            </Link>
-          </div>
+            </div>
+          </Link>
         ))}
       </div>
     </section>

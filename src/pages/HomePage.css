@@ -171,9 +171,13 @@ main {
 
 /* Infoikoner-sektion: border top/bund, padding */
 .infoikonersektion {
+  box-sizing: border-box;
+  height: 300px;
   border-top: 1px solid var(--brun);
   border-bottom: 1px solid var(--brun);
   padding: 1rem 0;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 }
 
 .infoikoner {

@@ -2,9 +2,9 @@
 // Viser dot-navigation og et CTA-billede oven på slideren.
 import { useState, useEffect } from "react";
 
-import img1 from "../image/forsidebillede.png";
-import img2 from "../image/forsidebillede2.png";
-import img3 from "../image/forsidebillede3.png";
+import img1 from "../image/hero-billede-1.svg";
+import img2 from "../image/hero-billede-2.svg";
+import img3 from "../image/hero-billede-3.svg";
 import heroCta from "../image/nyhederhero.svg";
 
 export default function HeroPictures() {

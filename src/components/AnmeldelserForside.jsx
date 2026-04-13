@@ -35,7 +35,7 @@ export default function AnmeldelserForside() {
               naturlige materialer, og at designet er så enkelt og tidløst. Det
               er helt klart blevet en af mine favorit webshops til børnetøj.”
             </p>
-            <p>- Maria Andersen</p>
+            <p className="anmeldelse-forfatter">– Maria Andersen</p>
           </div>
         </div>
 
@@ -58,7 +58,7 @@ export default function AnmeldelserForside() {
               kvalitet og stil. Jeg blev også positivt overrasket over hvor
               hurtigt min ordre kom.”
             </p>
-            <p>- Lærke Mathiasen</p>
+            <p className="anmeldelse-forfatter">– Lærke Mathiasen</p>
           </div>
         </div>
 
@@ -81,7 +81,7 @@ export default function AnmeldelserForside() {
               naturlige materialer, og at designet er så enkelt og tidløst. Det
               er helt klart blevet en af mine favorit webshops til børnetøj.”
             </p>
-            <p>- Sofie Berthelsen</p>
+            <p className="anmeldelse-forfatter">– Sofie Berthelsen</p>
           </div>
         </div>
 
@@ -104,7 +104,7 @@ export default function AnmeldelserForside() {
               kvalitet og stil. Jeg blev også positivt overrasket over hvor
               hurtigt min ordre kom.”
             </p>
-            <p>- Julie Sørensen</p>
+            <p className="anmeldelse-forfatter">– Julie Sørensen</p>
           </div>
         </div>
       </div>

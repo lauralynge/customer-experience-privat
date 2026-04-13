@@ -14,7 +14,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 kolonner */
   column-gap: 12.5rem; /* Stor afstand mellem kolonner */
-  row-gap: 3rem; /* Lodret afstand mellem rækker */
+  row-gap: 6rem; /* Lodret afstand mellem rækker */
   width: fit-content; /* Grid tilpasser sig indholdets bredde */
   margin: 0 auto;
   margin-top: 3.5rem;
@@ -31,14 +31,14 @@
 .anmeldelse-top {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
   margin-bottom: 1rem;
 }
 
 /* Profilbillede: fast størrelse og contain for at undgå forvrængning */
 .anmeldelse-profil {
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   object-fit: contain;
 }
 
@@ -64,6 +64,11 @@
 
 .anmeldelse-tekst p:last-child {
   margin: 0;
+}
+
+.anmeldelse-forfatter {
+  font-style: italic;
+  opacity: 0.7;
 }
 
 /* Trustpilot-link: flex for at centrere tekst og logo, med afstand */
