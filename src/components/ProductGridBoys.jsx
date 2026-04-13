@@ -29,6 +29,14 @@ export default function ProductGridBoys() {
       const url = `${import.meta.env.BASE_URL}products.json`;
       const response = await fetch(url);
       const data = await response.json();
+      // Filtrer kun drenge-produkter
+      const boysProducts = data.filter((product) => product.gender === "dreng");
+      setProducts(boysProducts);
+      setSelectedCategory("all");
+      setActiveFilters(createEmptyFilters());
+      setDraftFilters(createEmptyFilters());
+
+      // Flad listen ud, så hver variant bliver et produktkort
       // Først: flad listen ud, så hver variant bliver et produktkort
       // Dette sikrer at alle varianter (fx farver/størrelser) vises som individuelle kort
       const allProducts = data.flatMap((product) => {
@@ -60,10 +68,10 @@ export default function ProductGridBoys() {
       // Dette sikrer at produkter, der er markeret som "Unisex" eller har flere køn, også vises
       const boysAndUnisex = allProducts.filter(
         (product) =>
-          product.gender === "Dreng" ||
-          product.gender === "Unisex" ||
-          (Array.isArray(product.gender) && product.gender.includes("Dreng")) ||
-          (Array.isArray(product.gender) && product.gender.includes("Unisex")),
+          product.gender === "dreng" ||
+          product.gender === "unisex" ||
+          (Array.isArray(product.gender) && product.gender.includes("dreng")) ||
+          (Array.isArray(product.gender) && product.gender.includes("unisex")),
       );
 
       setProducts(boysAndUnisex);
