@@ -1,3 +1,9 @@
+/*
+  Styling for ProductCard-komponenten.
+  Indeholder layout for produktkort, billede, topbar med ikoner, info og links.
+*/
+
+/* Selve produktkortet: fast bredde, hvid baggrund, let skygge og overgang ved hover */
 .card {
   width: 18.5rem;
   height: auto;
@@ -8,11 +14,13 @@
   transition: all 0.3s ease;
 }
 
+/* Hover-effekt: løfter kortet og giver kraftigere skygge */
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
+/* Wrapper for produktbilledet: position relative for at kunne placere topbar absolut */
 .imageWrapper {
   position: relative;
   width: 100%;
@@ -20,17 +28,20 @@
   height: auto;
 }
 
+/* Produktbillede: fylder hele bredden, fast højde, baggrundsfarve hvis billede mangler */
 .image {
   width: 100%;
   height: 25rem;
   background-color: var(--sekundærhvid);
 }
 
+/* Wrapper for hjerteikonet */
 .heartWrapper {
   display: flex;
   align-items: center;
 }
 
+/* Topbar med nyhed/sale og hjerteikon: absolut placeret øverst, flex for at fordele ikoner */
 .topBar {
   position: absolute;
   top: 1rem;
@@ -38,23 +49,26 @@
   right: 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Ikonerne rykkes til højre */
+  justify-content: space-between; /* Ikonerne rykkes til hver sin side */
   z-index: 2;
 }
 
+/* Wrapper for venstreikoner (nyhed/sale): flex og gap */
 .leftIcons {
   display: flex;
   gap: 0.5rem;
   align-items: center;
 }
 
+/* Ens højde for nyhed, sale og hjerteikon */
 .nyhedBoks,
 .saleBoks,
 .heartIcon {
-  height: 32px; /* Ens højde */
+  height: 32px; /* Ens højde for alle ikoner */
   display: block;
 }
 
+/* Info-sektion under billedet: column layout, centreret vertikalt */
 .info {
   height: 4.5rem;
   padding: 0.5rem;
@@ -64,6 +78,7 @@
   justify-content: center; /* Centrerer indholdet vertikalt */
 }
 
+/* Produktnavn: max 2 linjer, ellipsis hvis for langt */
 .title {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -72,10 +87,12 @@
   overflow: hidden;
 }
 
+/* Pris: brun farve */
 .price {
   color: var(--brun);
 }
 
+/* Link omkring hele kortet: ingen underline, arver farve, fylder hele kortet */
 .cardLink {
   text-decoration: none;
   color: inherit;

@@ -1,9 +1,16 @@
+/*
+  Styling for Dropdown-komponenten.
+  Indeholder layout for overlay, grid, kolonner, links og luk-knap.
+*/
+
+/* Overlay der dækker hele skærmen når dropdown er åben */
 .dropdown-overlay {
   position: fixed;
   inset: 0;
   z-index: 200;
 }
 
+/* Selve dropdown-menuen: absolut placeret under navbar, fylder hele bredden */
 .kategoridropdown {
   position: absolute;
   top: 5.5rem;
@@ -22,22 +29,26 @@
   box-sizing: border-box;
 }
 
+/* Grid-layout til dropdown: 6 kolonner uden gap */
 .dropdown-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 0;
 }
 
+/* En kolonne i dropdown: padding og højre border */
 .dropdown-column {
   padding: 0 2rem;
   border-right: 0.05rem solid var(--strokebrun);
   min-height: 19rem;
 }
 
+/* Sidste kolonne har ingen højre border */
 .dropdown-column:last-child {
   border-right: none;
 }
 
+/* Titel-link i dropdown: fed, farve, ingen underline, margin */
 .dropdown-title {
   display: block;
   font-weight: 600;
@@ -46,10 +57,12 @@
   text-decoration: none;
 }
 
+/* Hover-effekt på titel: let skygge */
 .dropdown-title:hover {
   text-shadow: var(--brun) 0.06rem 0 0;
 }
 
+/* Links i dropdown-kolonne: blok, farve, ingen underline, spacing */
 .dropdown-column a {
   display: block;
   color: var(--brun);
@@ -59,10 +72,12 @@
   line-height: 1.25;
 }
 
+/* Hover-effekt på links: let skygge */
 .dropdown-column a:hover {
   text-shadow: var(--brun) 0.06rem 0 0;
 }
 
+/* Luk-knap: absolut placeret i øverste højre hjørne af dropdown */
 .dropdown-close {
   position: absolute;
   top: 2rem;

@@ -1,3 +1,9 @@
+/*
+  Styling for ProductGrid-komponenten.
+  Indeholder layout for produktgrid, filterpanel, filteroverlay, kategori-knapper og headergrafik.
+*/
+
+/* Grid med produkter: 4 kolonner, stor afstand, centreret */
 .productGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 på en række */
@@ -6,21 +12,14 @@
   justify-content: center;
 }
 
+/* Overskrift centreret med padding */
 h1 {
   padding: 2rem;
   display: flex;
   justify-content: center;
 }
 
-/* Filtrering og kategori OVERSIGT */
-.productGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 3rem;
-  margin: 3.5rem;
-  justify-content: center;
-}
-
+/* Filterpanel og kategorioversigt: flex, centreret, spacing */
 .filterPanel {
   display: flex;
   justify-content: center;
@@ -35,6 +34,7 @@ h1 {
   align-items: center;
 }
 
+/* Kategori-knapper: rundede, farver, hover/active styling */
 .categoryButton {
   background: var(--hvid);
   color: var(--brun);
@@ -59,6 +59,7 @@ h1 {
   border-color: var(--brun);
 }
 
+/* Filter-trigger-knap: inline-flex, centreret, ingen border/baggrund */
 .filterTriggerButton {
   display: inline-flex;
   align-items: center;
@@ -77,6 +78,7 @@ h1 {
   display: block;
 }
 
+/* Overlay og sidebar til filter på mobil/tablet */
 .filterOverlay {
   position: fixed;
   inset: 0;
@@ -124,6 +126,7 @@ h1 {
   display: block;
 }
 
+/* Filter-sektioner og valgmuligheder */
 .filterSectionButton {
   width: 100%;
   padding: 2rem 2.5rem;
@@ -175,6 +178,7 @@ h1 {
   height: 1rem;
 }
 
+/* Custom styling for checkboxes/radiobuttons */
 .filterOptionRow input[type="checkbox"],
 .filterOptionRow input[type="radio"] {
   appearance: none;
@@ -198,6 +202,7 @@ h1 {
   margin-top: 1rem;
 }
 
+/* Actionbar i bunden af filter-sidebar */
 .filterActionBar {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -225,14 +230,14 @@ h1 {
   color: var(--hvid);
 }
 
+/* Skjuler filterpanel på mindre skærme */
 @media (max-width: 80rem) {
   .filterPanel {
     display: none;
   }
 }
 
-/* header sektion grafik*/
-
+/* Headergrafik og sektion */
 .headerSection {
   position: relative;
   width: 100vw;
@@ -260,4 +265,3 @@ h1 {
 .headerSection img {
   margin-right: 5rem;
 }
-

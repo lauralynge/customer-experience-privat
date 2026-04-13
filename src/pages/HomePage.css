@@ -1,33 +1,37 @@
+/*
+  Styling for HomePage-komponenten.
+  Indeholder layout for hero, kønssektion, badges, inspiration, infoikoner og grid.
+*/
+
+/* Main wrapper: column layout, trækker hero op så banner overlapper */
 main {
   display: flex;
   flex-direction: column;
   margin-top: -0.5rem;
 }
 
-/* Hero sektion*/
+/* Hero sektion: fylder hele viewport, centreret, overlapper banner */
 .hero {
   position: relative;
-  margin-top: -4rem; /* Bruges til at trække hero-sektionen op så banner overlapper */
-  /* fylder hele viewport-bredden uden side-margin */
+  margin-top: -4rem; /* Trækker hero op så banner overlapper */
   width: 100vw;
   margin-left: calc(50% - 50vw);
   height: 100vh;
   overflow: hidden;
-
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: -10rem;
 }
 
-/* billed-container */
+/* Hero slider: absolut placeret, fylder hele hero */
 .hero-slider {
   position: absolute;
   inset: 0;
   z-index: 0; /* ligger bagerst */
 }
 
-/* selve billedet */
+/* Hero-billede: fylder hele bredden, 83% af højden, beskæres */
 .hero-image {
   width: 100%;
   height: 83%;
@@ -35,14 +39,16 @@ main {
   display: block;
 }
 
+/* Farvet forår/nyheder-titel: centreret, stor margin, høj z-index */
 .title {
   position: relative;
   z-index: 2;
   margin-bottom: 18rem;
   line-height: 1.25;
-  text-align: center; /* centrerer teksten */
+  text-align: center;
 }
 
+/* Hero CTA-knap: absolut placeret, centreret i bunden af hero */
 .hero-cta {
   position: absolute;
   bottom: 24rem;
@@ -53,6 +59,7 @@ main {
   height: auto;
 }
 
+/* Hero dots: navigation under slider, centreret, spacing */
 .hero-dots {
   position: absolute;
   bottom: 12rem;
@@ -76,7 +83,7 @@ main {
   opacity: 1;
 }
 
-/*køn sektion*/
+/* Køn-sektion: flex-row, stor afstand, centreret */
 .gender-grid {
   display: flex;
   gap: 4.5rem;
@@ -94,7 +101,7 @@ main {
   object-fit: cover;
 }
 
-/* linket (placerer overlay i midten) */
+/* Overlay-link i midten af kortet */
 .gender-card a img {
   position: absolute;
   top: 50%;
@@ -102,12 +109,11 @@ main {
   transform: translate(-50%, -50%);
 }
 
-/* overlay-billedet */
 .gender-card a img {
   display: block;
 }
 
-/* badges sektion*/
+/* Badges-sektion: flex-row, wrap, centreret, spacing */
 .badges-grid {
   display: flex;
   justify-content: center;
@@ -127,7 +133,7 @@ main {
   max-width: 16rem;
 }
 
-/* inspiration sektion*/
+/* Inspiration-sektion: column layout, spacing */
 .forside-inspiration {
   display: flex;
   flex-direction: column;
@@ -163,18 +169,18 @@ main {
   text-decoration: underline;
 }
 
-/*infoikoner sektion*/
+/* Infoikoner-sektion: border top/bund, padding */
 .infoikonersektion {
   border-top: 1px solid var(--brun);
   border-bottom: 1px solid var(--brun);
-
-  padding: 1rem 0; /* giver luft mellem cards og linjerne */
+  padding: 1rem 0;
 }
 
 .infoikoner {
   margin: 4rem 0;
 }
 
+/* Infoikoner grid: flex-row, stor afstand, centreret */
 .info-grid {
   display: flex;
   justify-content: center;

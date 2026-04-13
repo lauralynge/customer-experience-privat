@@ -8,15 +8,17 @@ import closeIcon from "../image/kryds.svg";
 import styles from "./ProductGrid.module.css";
 
 export default function FilterOverlay({
-  isOpen,
-  onOpen,
-  onClose,
-  options,
-  draftFilters,
-  onDraftFiltersChange,
-  onReset,
-  onApply,
+  isOpen, // Om overlayet er åbent (true/false)
+  onOpen, // Funktion til at åbne overlayet (bruges til filter-knap på mobil)
+  onClose, // Funktion til at lukke overlayet (bruges til baggrund og kryds)
+  options, // Mulige filtermuligheder (sort, typer, farver, størrelser, brands, køn, priser) – genereres dynamisk ud fra produkterne
+  draftFilters, // De aktuelle (ikke-anvendte) filtervalg – ændres løbende mens brugeren klikker rundt
+  onDraftFiltersChange, // Funktion til at opdatere draftFilters, så parent-komponenten kan holde styr på filter-state
+  onReset, // Funktion til at nulstille alle filtre (både i UI og i parent)
+  onApply, // Funktion til at anvende valgte filtre (kopierer draftFilters til aktive filtre i parent)
 }) {
+  // openSections holder styr på hvilke filtersektioner der er foldet ud (true/false for hver sektion)
+  // Bruges til at folde grupper ud/ind (fx "Farver", "Brands")
   const [openSections, setOpenSections] = useState({
     sort: false,
     productTypes: false,
@@ -27,6 +29,8 @@ export default function FilterOverlay({
     prices: false,
   });
 
+  // Skifter om en sektion er åben/lukket (bruges til at folde filtergrupper ud/ind)
+  // Når brugeren klikker på en sektion, toggles dens state
   const toggleSection = (sectionName) => {
     setOpenSections((prev) => ({
       ...prev,
@@ -34,6 +38,9 @@ export default function FilterOverlay({
     }));
   };
 
+  // Tilføjer/fjerner et filtervalg i en gruppe (fx farver, brands, størrelser)
+  // Hvis værdien allerede er valgt, fjernes den – ellers tilføjes den
+  // Dette gør det muligt at vælge flere værdier i samme filtergruppe
   const toggleCheckbox = (group, value) => {
     const currentValues = draftFilters[group] || [];
     const isSelected = currentValues.includes(value);
@@ -41,11 +48,12 @@ export default function FilterOverlay({
     onDraftFiltersChange({
       ...draftFilters,
       [group]: isSelected
-        ? currentValues.filter((item) => item !== value)
-        : [...currentValues, value],
+        ? currentValues.filter((item) => item !== value) // Fjern hvis valgt
+        : [...currentValues, value], // Tilføj hvis ikke valgt
     });
   };
 
+  // Sætter sorteringsfilteret (kun én kan vælges ad gangen)
   const setSort = (value) => {
     onDraftFiltersChange({
       ...draftFilters,
@@ -53,6 +61,7 @@ export default function FilterOverlay({
     });
   };
 
+  // Viser plus/minus-ikon afhængigt af om sektionen er åben (bruges til at indikere fold ud/ind)
   const renderSectionIcon = (isSectionOpen) => (
     <img
       src={isSectionOpen ? minusIcon : plusIcon}
@@ -64,6 +73,7 @@ export default function FilterOverlay({
 
   return (
     <>
+      {/* Knap til at åbne filter-overlayet (vises typisk på mobil). onOpen sætter isOpen=true i parent. */}
       <button
         type="button"
         className={styles.filterTriggerButton}
@@ -73,6 +83,7 @@ export default function FilterOverlay({
         <img src={filterButtonIcon} alt="" aria-hidden="true" />
       </button>
 
+      {/* Selve overlayet vises kun hvis isOpen er true */}
       {isOpen && (
         <div
           className={styles.filterOverlay}
@@ -80,6 +91,7 @@ export default function FilterOverlay({
           aria-modal="true"
           aria-label="Filter"
         >
+          {/* Klik på baggrunden (uden for sidebar) lukker overlayet */}
           <button
             type="button"
             className={styles.filterOverlayBackdrop}
@@ -87,10 +99,12 @@ export default function FilterOverlay({
             aria-label="Luk filter"
           />
 
+          {/* Sidebar med alle filtermuligheder */}
           <aside className={styles.filterSidebar}>
             <div className={styles.filterHeader}>
               <h1>Filter</h1>
 
+              {/* Knap til at lukke filteret (øverste højre hjørne) */}
               <button
                 type="button"
                 className={styles.filterCloseButton}
@@ -101,6 +115,7 @@ export default function FilterOverlay({
               </button>
             </div>
 
+            {/* Sorteringssektion (radio-knapper, kun én kan vælges) */}
             <button
               type="button"
               className={styles.filterSectionButton}
@@ -131,6 +146,7 @@ export default function FilterOverlay({
               </div>
             )}
 
+            {/* Produkttype-sektion (checkboxe, flere kan vælges) */}
             <button
               type="button"
               className={styles.filterSectionButton}
@@ -157,6 +173,7 @@ export default function FilterOverlay({
               </div>
             )}
 
+            {/* Farve-sektion (checkboxe, flere kan vælges) */}
             <button
               type="button"
               className={styles.filterSectionButton}
@@ -183,6 +200,7 @@ export default function FilterOverlay({
               </div>
             )}
 
+            {/* Størrelsessektion (checkboxe, grupperet efter label, flere kan vælges) */}
             <button
               type="button"
               className={styles.filterSectionButton}
@@ -194,6 +212,7 @@ export default function FilterOverlay({
 
             {openSections.sizes && (
               <div className={styles.filterSectionContent}>
+                {/* Hver gruppe kan fx være "Baby", "Børn", "Teen" – grupperes for bedre overblik */}
                 {options.sizes.map((group) => (
                   <div key={group.label} className={styles.filterSizeGroup}>
                     <p>{group.label}</p>
@@ -215,6 +234,7 @@ export default function FilterOverlay({
               </div>
             )}
 
+            {/* Brand-sektion (checkboxe, flere kan vælges) */}
             <button
               type="button"
               className={styles.filterSectionButton}
@@ -241,6 +261,7 @@ export default function FilterOverlay({
               </div>
             )}
 
+            {/* Køn-sektion (checkboxe, flere kan vælges) */}
             <button
               type="button"
               className={styles.filterSectionButton}
@@ -267,6 +288,7 @@ export default function FilterOverlay({
               </div>
             )}
 
+            {/* Pris-sektion (checkboxe, flere kan vælges) */}
             <button
               type="button"
               className={styles.filterSectionButton}
@@ -293,7 +315,9 @@ export default function FilterOverlay({
               </div>
             )}
 
+            {/* Handlingsknapper nederst: Nulstil og Vis produkter */}
             <div className={styles.filterActionBar}>
+              {/* Nulstil alle filtre (både i overlay og parent) */}
               <button
                 type="button"
                 className={styles.filterResetButton}
@@ -302,6 +326,7 @@ export default function FilterOverlay({
                 Nulstil filter
               </button>
 
+              {/* Anvend valgte filtre (kopierer draftFilters til aktive filtre i parent) */}
               <button
                 type="button"
                 className={styles.filterApplyButton}

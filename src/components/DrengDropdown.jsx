@@ -7,17 +7,22 @@ import kryds from "../image/kryds.svg";
 
 export default function DrengDropdown({ onClose }) {
   return (
+    // Overlay der dækker hele skærmen. Klik på baggrunden lukker menuen (onClose)
     <div className="dropdown-overlay" onClick={onClose}>
+      {/* Selve dropdown-menuen. onClick med stopPropagation forhindrer at klik inde i menuen lukker overlayet. */}
       <div
         className="kategoridropdown"
-        onClick={(e) => e.stopPropagation()}
-        style={{ backgroundImage: `url(${dropdownbaggrund})` }}
+        onClick={(e) => e.stopPropagation()} // Forhindrer at klik bobler op og lukker overlayet
+        style={{ backgroundImage: `url(${dropdownbaggrund})` }} // Baggrundsbillede for menuen
       >
+        {/* Luk-knap (øverste højre hjørne). Klik lukker dropdown. */}
         <button className="dropdown-close" onClick={onClose}>
           <img src={kryds} alt="Luk" />
         </button>
 
+        {/* Grid-layout med 6 kolonner, én for hver hovedkategori. */}
         <div className="dropdown-grid">
+          {/* Kolonne: Overtøj. NavLink bruges for at kunne style aktivt link og for at undgå fuld reload. */}
           <div className="dropdown-column">
             <NavLink
               to="/kategori/dreng/overtoj"
@@ -26,7 +31,7 @@ export default function DrengDropdown({ onClose }) {
             >
               Overtøj
             </NavLink>
-
+            {/* Underkategorier til overtøj. onClick={onClose} lukker dropdown ved navigation. */}
             <NavLink to="/kategori/dreng/overtoj/flyverdragt" onClick={onClose}>
               Flyverdragt
             </NavLink>
@@ -47,6 +52,7 @@ export default function DrengDropdown({ onClose }) {
             </NavLink>
           </div>
 
+          {/* Kolonne: Overdele */}
           <div className="dropdown-column">
             <NavLink
               to="/kategori/dreng/overdele"
@@ -55,7 +61,7 @@ export default function DrengDropdown({ onClose }) {
             >
               Overdele
             </NavLink>
-
+            {/* Underkategorier til overdele */}
             <NavLink to="/kategori/dreng/overdele/strik" onClick={onClose}>
               Strik
             </NavLink>
@@ -70,6 +76,7 @@ export default function DrengDropdown({ onClose }) {
             </NavLink>
           </div>
 
+          {/* Kolonne: Accessories */}
           <div className="dropdown-column">
             <NavLink
               to="/kategori/dreng/accessories"
@@ -78,7 +85,7 @@ export default function DrengDropdown({ onClose }) {
             >
               Accessories
             </NavLink>
-
+            {/* Underkategorier til accessories */}
             <NavLink
               to="/kategori/dreng/accessories/stromper"
               onClick={onClose}
@@ -93,6 +100,7 @@ export default function DrengDropdown({ onClose }) {
             </NavLink>
           </div>
 
+          {/* Kolonne: Underdele */}
           <div className="dropdown-column">
             <NavLink
               to="/kategori/dreng/underdele"
@@ -101,7 +109,7 @@ export default function DrengDropdown({ onClose }) {
             >
               Underdele
             </NavLink>
-
+            {/* Underkategorier til underdele */}
             <NavLink to="/kategori/dreng/underdele/shorts" onClick={onClose}>
               Shorts
             </NavLink>
@@ -116,6 +124,7 @@ export default function DrengDropdown({ onClose }) {
             </NavLink>
           </div>
 
+          {/* Kolonne: Fodtøj */}
           <div className="dropdown-column">
             <NavLink
               to="/kategori/dreng/fodtoj"
@@ -124,7 +133,7 @@ export default function DrengDropdown({ onClose }) {
             >
               Fodtøj
             </NavLink>
-
+            {/* Underkategorier til fodtøj */}
             <NavLink to="/kategori/dreng/fodtoj/sko" onClick={onClose}>
               Sko
             </NavLink>
@@ -139,6 +148,7 @@ export default function DrengDropdown({ onClose }) {
             </NavLink>
           </div>
 
+          {/* Kolonne: Undertøj & nattøj, Udsalg, Nyheder. Her bruges kun hovedlinks. */}
           <div className="dropdown-column">
             <NavLink
               to="/kategori/dreng/undertojognattoj"
@@ -147,7 +157,6 @@ export default function DrengDropdown({ onClose }) {
             >
               Undertøj & nattøj
             </NavLink>
-
             <NavLink
               to="/kategori/dreng/udsalg"
               onClick={onClose}
@@ -155,7 +164,6 @@ export default function DrengDropdown({ onClose }) {
             >
               Udsalg
             </NavLink>
-
             <NavLink
               to="/kategori/dreng/nyheder"
               onClick={onClose}

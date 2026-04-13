@@ -1,3 +1,9 @@
+/*
+  Styling for ShoppingbagPage-komponenten.
+  Indeholder layout for overlay, kurvkort, trin-indikator, varer, mængde, footer og responsivitet.
+*/
+
+/* Overlay for hele kurven: fixed, dækker hele viewport, høj z-index, flex for at placere kortet til højre */
 .shoppingbag-page {
   position: fixed;
   inset: 0;
@@ -6,6 +12,7 @@
   justify-content: flex-end;
 }
 
+/* Baggrunds-overlay: mørk, klikbar, fade-in animation */
 .shoppingbag-backdrop {
   position: absolute;
   inset: 0;
@@ -15,6 +22,7 @@
   animation: shoppingbag-backdrop-in 220ms ease;
 }
 
+/* Titel for kurv: display-font, farve, størrelse */
 .shoppingbag-page-title {
   margin: 0;
   font-family: var(--font-display);
@@ -22,7 +30,7 @@
   color: var(--brun);
 }
 
-/* Card */
+/* Selve kurvkortet: fast bredde, højre hjørne, afrundede hjørner, skygge, column layout, animation */
 .shoppingbag-card {
   position: relative;
   z-index: 1;
@@ -43,7 +51,6 @@
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -54,14 +61,13 @@
     opacity: 0;
     transform: translateX(22px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-/* Card Header */
+/* Header i kurvkort: flex-row, spacing mellem titel og luk-knap */
 .shoppingbag-card-header {
   display: flex;
   justify-content: space-between;
@@ -78,7 +84,7 @@
   line-height: 1;
 }
 
-/* Step Indicator */
+/* Trin-indikator: flex-row, spacing, cirkler og labels */
 .shoppingbag-steps {
   display: flex;
   justify-content: space-between;
@@ -120,7 +126,7 @@
   text-align: center;
 }
 
-/* Cart Items */
+/* Liste over varer i kurven: column layout, spacing */
 .shoppingbag-items {
   display: flex;
   flex-direction: column;
@@ -178,7 +184,7 @@
   margin: 0;
 }
 
-/* Quantity icon */
+/* Mængdevælger: ikon, plus/minus-knapper, centreret tal */
 .shoppingbag-qty {
   position: relative;
   margin-top: 0.35rem;
@@ -237,7 +243,7 @@
   right: 0;
 }
 
-/* Delete button */
+/* Slet-knap: ikon, ingen border/baggrund, flex-row */
 .shoppingbag-delete-btn {
   background: none;
   border: none;
@@ -256,14 +262,14 @@
   display: block;
 }
 
-/* Divider */
+/* Divider mellem varer og footer */
 .shoppingbag-divider {
   border: none;
   border-top: 1px solid rgba(74, 47, 44, 0.2);
   margin: 0;
 }
 
-/* Footer */
+/* Footer i kurvkort: column layout, spacing */
 .shoppingbag-footer {
   display: flex;
   flex-direction: column;
@@ -313,6 +319,7 @@
   background-color: rgba(74, 47, 44, 0.05);
 }
 
+/* Responsivitet: mindre padding og ingen afrunding på mobil */
 @media (max-width: 480px) {
   .shoppingbag-page-title {
     font-size: 1.55rem;

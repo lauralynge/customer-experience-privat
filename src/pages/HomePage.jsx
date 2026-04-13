@@ -11,11 +11,13 @@ import AnmeldelserForside from "../components/AnmeldelserForside";
 
 export default function HomePage() {
   return (
+    // Hele forsiden er samlet i <main>
     <>
       <main>
-        {/* Hero Section */}
+        {/* Hero Section med slider og farverig titel */}
         <section className="hero">
           <HeroPictures />
+          {/* Farvet forår/nyheder-titel. Hver bogstav har sin egen farve for at skabe blikfang */}
           <p className="title">
             <span style={{ color: "var(--blå)" }}> F</span>
             <span style={{ color: "var(--lyserød)" }}> O</span>
@@ -34,31 +36,31 @@ export default function HomePage() {
           </p>
         </section>
 
-        {/* populære brands Section */}
+        {/* Populære brands Section – viser brandkarrusel */}
         <section className="populære-brands">
           <BrandKarrusel />
         </section>
 
-        {/* Køn Section */}
+        {/* Køn Section – viser links til baby/pige/dreng */}
         <section className="køn">
           <GenderSection />
         </section>
 
-        {/* badges Section */}
+        {/* Badges Section – viser badges for fx økologi, certificeringer mv. */}
         <section className="badges">
           <Badges />
         </section>
 
-        {/* inspiration Section */}
+        {/* Inspiration Section – inspirationsbilleder og Instagram-tag */}
         <section className="inspiration">
           <ForsideInspiration />
         </section>
 
-        {/* inspiration Section */}
+        {/* Infoikoner Section – leveringsinfo, fri fragt, retur, anmeldelser */}
         <section className="infoikonersektion">
           <Infoikoner />
         </section>
-        {/* Anmeldelser Section */}
+        {/* Anmeldelser Section – kundeanmeldelser */}
         <section className="anmeldelser-sektion">
           <AnmeldelserForside />
         </section>
