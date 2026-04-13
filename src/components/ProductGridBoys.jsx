@@ -25,7 +25,7 @@ export default function ProductGridBoys() {
       const response = await fetch(url);
       const data = await response.json();
       // Filtrer kun drenge-produkter
-      const boysProducts = data.filter((product) => product.gender === "Dreng");
+      const boysProducts = data.filter((product) => product.gender === "dreng");
       setProducts(boysProducts);
       setSelectedCategory("all");
       setActiveFilters(createEmptyFilters());
@@ -60,10 +60,10 @@ export default function ProductGridBoys() {
       // Filtrér på gender EFTER flatten
       const boysAndUnisex = allProducts.filter(
         (product) =>
-          product.gender === "Dreng" ||
-          product.gender === "Unisex" ||
-          (Array.isArray(product.gender) && product.gender.includes("Dreng")) ||
-          (Array.isArray(product.gender) && product.gender.includes("Unisex")),
+          product.gender === "dreng" ||
+          product.gender === "unisex" ||
+          (Array.isArray(product.gender) && product.gender.includes("dreng")) ||
+          (Array.isArray(product.gender) && product.gender.includes("unisex")),
       );
 
       setProducts(boysAndUnisex);

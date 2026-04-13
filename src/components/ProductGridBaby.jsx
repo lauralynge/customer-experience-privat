@@ -53,7 +53,7 @@ export default function ProductGridBaby() {
 
       // Filtrér på gender EFTER flatten
       const babyProducts = allProducts.filter(
-        (product) => product.gender === "Baby",
+        (product) => product.gender === "baby",
       );
 
       setProducts(babyProducts);
