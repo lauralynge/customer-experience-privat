@@ -19,9 +19,9 @@ import InspirationPage from "./pages/InspirationPage";
 import FavoritesPage from "./pages/FavoritesPage";
 import DetailPage from "./pages/DetailPage";
 import SustainabilityPage from "./pages/SustainabilityPage";
-import ProductGridBaby from "./components/ProductGridBaby";
-import ProductGridGirls from "./components/ProductGridGirls";
-import ProductGridBoys from "./components/ProductGridBoys";
+import BabyPage from "./pages/BabyPage";
+import GirlsPage from "./pages/GirlsPage";
+import BoysPage from "./pages/BoysPage";
 import CategoryPage from "./components/CategoryPage";
 import ShoppingbagPage from "./pages/ShoppingbagPage";
 import BrandPage from "./pages/BrandPage";
@@ -59,9 +59,9 @@ export default function App() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/sale" element={<SalePage />} />
           {/* Produktkategorier */}
-          <Route path="/baby" element={<ProductGridBaby />} />
-          <Route path="/pige" element={<ProductGridGirls />} />
-          <Route path="/dreng" element={<ProductGridBoys />} />
+          <Route path="/baby" element={<BabyPage />} />
+          <Route path="/pige" element={<GirlsPage />} />
+          <Route path="/dreng" element={<BoysPage />} />
           {/* Checkout og betaling */}
           <Route path="/payment" element={<PaymentPage />} />
           {/* Nyheder, inspiration, favoritter */}
@@ -89,7 +89,7 @@ export default function App() {
           <Routes>
             {/* Overlay for kurv og evt. baby-side */}
             <Route path="/shoppingbag" element={<ShoppingbagPage />} />
-            <Route path="/baby" element={<ProductGridBaby />} />
+            <Route path="/baby" element={<BabyPage />} />
           </Routes>
         )}
         {/* Kurv-overlay (slide-in) styret via context */}

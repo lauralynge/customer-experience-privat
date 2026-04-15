@@ -4,6 +4,9 @@ import { useState } from "react";
 import styles from "./DetailInfoBox.module.css";
 
 export default function DetailAccordion({ product }) {
+  // Funktion der sikrer stort begyndelsesbogstav
+  const capitalizeFirst = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+
   // open er et array med indeks for de sektioner, der er åbne. Første sektion (0) er åben som default.
   const [open, setOpen] = useState([0]);
 
@@ -21,26 +24,26 @@ export default function DetailAccordion({ product }) {
   // Map med uddybende beskrivelser for forskellige materialetyper.
   // Hvis produktets materiale findes i dette map, vises den uddybende tekst, ellers vises bare materialets navn.
   const materialDescriptions = {
-    Merinould:
+    merinould:
       "Merinould er en naturlig fiber, der er blød, temperaturregulerende og åndbar. Den er ideel til børn, da den ikke kradser og hjælper med at holde huden tør og komfortabel.",
-    "Økologisk bomuld":
+    "økologisk bomuld":
       "Økologisk bomuld dyrkes uden brug af skadelige kemikalier og pesticider. Det er et blødt, allergivenligt materiale, der er skånsomt mod både huden og miljøet.",
-    Bomuld:
+    bomuld:
       "Bomuld er et klassisk, blødt og åndbart materiale, der er nemt at vaske og behageligt at have på.",
-    "Uld & silke":
+    "uld & silke":
       "Uld & silke kombinerer det bedste fra begge materialer: uldens varme og silkens blødhed. Det giver et let, temperaturregulerende og luksuriøst produkt.",
-    "Merinould fleece":
+    "merinould fleece":
       "Merinould fleece er ekstra blød og varm, perfekt til kolde dage. Det er let, åndbart og holder barnet komfortabelt.",
-    Uld: "Uld er et naturligt materiale, der isolerer godt og holder kroppen varm, selv når det er fugtigt.",
-    Polyester:
+    uld: "Uld er et naturligt materiale, der isolerer godt og holder kroppen varm, selv når det er fugtigt.",
+    polyester:
       "Polyester er et slidstærkt og let syntetisk materiale, der ofte bruges til overtøj og sportstøj.",
-    "Genanvendt polyester":
+    "genanvendt polyester":
       "Genanvendt polyester er fremstillet af genbrugte plastmaterialer, hvilket gør det til et mere bæredygtigt valg.",
-    Læder:
+    læder:
       "Læder er et robust og fleksibelt materiale, der giver god beskyttelse og komfort til sko og accessories.",
-    Naturgummi:
+    naturgummi:
       "Naturgummi er et naturligt, elastisk materiale, der bruges til gummistøvler og giver god fleksibilitet og vandtæthed.",
-    "Læder & uld":
+    "læder & uld":
       "Læder & uld kombinerer læderets holdbarhed med uldens varme, ideelt til sko og støvler til børn.",
     "THERMOLITE® EcoMade-polstring":
       "THERMOLITE® EcoMade-polstring er en innovativ isolering, der holder barnet varmt og er fremstillet af genanvendte materialer.",
@@ -48,14 +51,14 @@ export default function DetailAccordion({ product }) {
       "BIONIC-FINISH® ECO er en miljøvenlig imprægnering, der gør tekstiler vandafvisende uden skadelige kemikalier.",
     "100 % uldfleece":
       "100 % uldfleece er utroligt blødt og varmt, perfekt til vintertøj og accessories til de mindste.",
-    "Bomulds denim":
+    "bomulds denim":
       "Bomulds denim er et slidstærkt og alsidigt materiale, der er perfekt til jeans og jakker.",
   };
 
   // Array med alle sektioner i akkordeonet. Hver sektion har en titel og et indhold.
   // Materiale-sektionen bruger materialDescriptions hvis muligt.
   const sections = [
-    { title: "Beskrivelse", content: product.description },
+    { title: "Beskrivelse", content: capitalizeFirst(product.description) },
     {
       title: "Materialer",
       content: materialDescriptions[product.materiale] || product.materiale,

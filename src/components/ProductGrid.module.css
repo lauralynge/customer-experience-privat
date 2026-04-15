@@ -19,12 +19,16 @@ h1 {
   justify-content: center;
 }
 
+/* Filter-knap ikon */
+.filterButtonIcon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+
 /* Filterpanel og kategorioversigt: flex, centreret, spacing */
 .filterPanel {
-  display: flex;
-  justify-content: center;
-  margin: 2rem;
-  gap: 1rem;
+   margin: 3.5rem;
 }
 
 .categoryButtons {
@@ -64,7 +68,7 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 1rem auto 0;
+  margin: 0 3.5rem;
   border: 0;
   background: transparent;
   padding: 0;

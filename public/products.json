@@ -387,40 +387,46 @@
     "id": 9,
     "title": "Fender Cap",
     "price": 249.95,
-    "color": "blue",
-    "color_filter": "blue",
     "over_kategori": "accessories",
-    "under_kategori": "hat",
+    "under_kategori": "kasket",
     "brand": "konges slojd",
-    "gender": ["unisex"],
-    "sale": false,
-    "news": false,
-    "available": true,
     "description": "klassisk cap med striber",
-    "materiale": "økologisk bomuld",
-    "pasform": "Regular",
-    "rating": 4.2,
-    "images": [
-      "/product-pics/9-1.png",
-      "/product-pics/9-2.png",
-      "/product-pics/9-3.png",
-      "/product-pics/9-4.png"
-    ],
-    "size": {
-      "56": true,
-      "62": false,
-      "68": true,
-      "74": true,
-      "80": false,
-      "86": true,
-      "92": true,
-      "100": false,
-      "110": true,
-      "120": false,
-      "130": true,
-      "140": true,
-      "150": false
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Fender Cap",
+        "color": "blue",
+        "color_filter": "blue",
+        "gender": ["unisex"],
+        "sale": false,
+        "news": false,
+        "available": true,
+        "materiale": "økologisk bomuld",
+        "pasform": "Regular",
+        "rating": 4.2,
+        "images": [
+          "/product-pics/9-1.png",
+          "/product-pics/9-2.png",
+          "/product-pics/9-3.png",
+          "/product-pics/9-4.png"
+        ],
+        "size": {
+          "56": true,
+          "62": false,
+          "68": true,
+          "74": true,
+          "80": false,
+          "86": true,
+          "92": true,
+          "100": false,
+          "110": true,
+          "120": false,
+          "130": true,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
   },
 
   {
@@ -505,40 +511,47 @@
     "id": 11,
     "title": "Sleepy Pyjamas",
     "price": 399.95,
-    "color": "lemon",
-    "color_filter": ["beige", "yellow"],
-    "over_kategori": "undertøj & nattøj",
-    "under_kategori": "nattøj",
+    "over_kategori": "nattøj",
+    "under_kategori": "pyjamas",
     "brand": "konges slojd",
-    "gender": ["pige"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "pyjamassæt med citronprint",
-    "materiale": "økologisk bomuld",
-    "pasform": "Regular",
-    "rating": 4.7,
-    "images": [
-      "/product-pics/pj-lemon-1.png",
-      "/product-pics/pj-lemon-2.png",
-      "/product-pics/pj-lemon-3.png",
-      "/product-pics/pj-lemon-4.png"
-    ],
-    "size": {
-      "56": true,
-      "62": false,
-      "68": true,
-      "74": true,
-      "80": false,
-      "86": true,
-      "92": false,
-      "100": true,
-      "110": true,
-      "120": false,
-      "130": true,
-      "140": false,
-      "150": true
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Sleepy Pyjamas",
+        "color": "lemon",
+        "color_filter": ["beige", "yellow"],
+        "gender": ["pige"],
+        "sale": false,
+        "news": true,
+        "available": true,
+
+        "materiale": "økologisk bomuld",
+        "pasform": "Regular",
+        "rating": 4.7,
+        "images": [
+          "/product-pics/pj-lemon-1.png",
+          "/product-pics/pj-lemon-2.png",
+          "/product-pics/pj-lemon-3.png",
+          "/product-pics/pj-lemon-4.png"
+        ],
+        "size": {
+          "56": true,
+          "62": false,
+          "68": true,
+          "74": true,
+          "80": false,
+          "86": true,
+          "92": false,
+          "100": true,
+          "110": true,
+          "120": false,
+          "130": true,
+          "140": false,
+          "150": true
+        }
+      }
+    ]
   },
 
   {
@@ -785,7 +798,7 @@
     "id": 17,
     "title": "Nederdel i Bæk & Bølge",
     "price": 349.95,
-    "over_kategori": "underdel",
+    "over_kategori": "underdele",
     "under_kategori": "nederdel",
     "brand": "dilling",
     "description": "nederdel i bæk & bølge i økologisk bomuld",
@@ -865,7 +878,7 @@
     "id": 19,
     "title": "Bukser i Merinould",
     "price": 399.95,
-    "over_kategori": "underdel",
+    "over_kategori": "underdele",
     "under_kategori": "bukser",
     "brand": "dilling",
     "description": "bukser i merinould til børn",
@@ -945,7 +958,7 @@
     "id": 21,
     "title": "Bukser i Merinould",
     "price": 399.95,
-    "over_kategori": "underdel",
+    "over_kategori": "underdele",
     "under_kategori": "bukser",
     "brand": "dilling",
     "description": "bukser i merinould til baby",
@@ -1424,40 +1437,46 @@
     "id": 33,
     "title": "Baby Underbukser i Uld/silke",
     "price": 199.95,
-    "color": "sand",
-    "color_filter": "beige",
     "over_kategori": "undertøj & nattøj",
     "under_kategori": "underbukser",
     "brand": "dilling",
-    "gender": ["baby"],
-    "sale": false,
-    "news": true,
-    "available": true,
-    "description": "bløde baby underbukser",
-    "materiale": "uld & silke",
-    "pasform": "Regular",
-    "rating": 4.6,
-    "images": [
-      "/product-pics/33-1.png",
-      "/product-pics/33-2.png",
-      "/product-pics/33-3.png",
-      "/product-pics/33-4.png"
-    ],
-    "size": {
-      "56": true,
-      "62": true,
-      "68": false,
-      "74": true,
-      "80": true,
-      "86": false,
-      "92": true,
-      "100": false,
-      "110": true,
-      "120": true,
-      "130": false,
-      "140": true,
-      "150": false
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Baby Underbukser i Uld/silke",
+        "color": "sand",
+        "color_filter": "beige",
+        "gender": ["baby"],
+        "sale": false,
+        "news": true,
+        "available": true,
+        "description": "bløde baby underbukser",
+        "materiale": "uld & silke",
+        "pasform": "Regular",
+        "rating": 4.6,
+        "images": [
+          "/product-pics/33-1.png",
+          "/product-pics/33-2.png",
+          "/product-pics/33-3.png",
+          "/product-pics/33-4.png"
+        ],
+        "size": {
+          "56": true,
+          "62": true,
+          "68": false,
+          "74": true,
+          "80": true,
+          "86": false,
+          "92": true,
+          "100": false,
+          "110": true,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
   },
 
   {
@@ -1624,42 +1643,48 @@
     "id": 38,
     "title": "Hjemmesko i Uld",
     "price": 349.95,
-    "color": "brown",
-    "color_filter": "brown",
     "over_kategori": "fodtøj",
     "under_kategori": "futter",
     "brand": "dilling",
-    "gender": ["unisex"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "varme hjemmesko i uld",
-    "materiale": "uld",
-    "pasform": "Regular",
-    "rating": 4.7,
-    "images": [
-      "/product-pics/38-1.png",
-      "/product-pics/38-2.png",
-      "/product-pics/38-3.png",
-      "/product-pics/38-4.png"
-    ],
-    "size": {
-      "56": true,
-      "62": false,
-      "68": true,
-      "74": true,
-      "80": false,
-      "86": true,
-      "92": false,
-      "100": true,
-      "110": true,
-      "120": false,
-      "130": true,
-      "140": false,
-      "150": true
-    }
-  },
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Hjemmesko i Uld",
+        "color": "brown",
+        "color_filter": "brown",
+        "gender": ["unisex"],
+        "sale": false,
+        "news": true,
+        "available": true,
 
+        "materiale": "uld",
+        "pasform": "Regular",
+        "rating": 4.7,
+        "images": [
+          "/product-pics/38-1.png",
+          "/product-pics/38-2.png",
+          "/product-pics/38-3.png",
+          "/product-pics/38-4.png"
+        ],
+        "size": {
+          "56": true,
+          "62": false,
+          "68": true,
+          "74": true,
+          "80": false,
+          "86": true,
+          "92": false,
+          "100": true,
+          "110": true,
+          "120": false,
+          "130": true,
+          "140": false,
+          "150": true
+        }
+      }
+    ]
+  },
   {
     "id": 39,
     "title": "Baby Futter i Merinould Fleece",
@@ -1710,132 +1735,142 @@
     "id": 41,
     "title": "Lingon Long Sleeve Body",
     "price": 299.95,
-    "color": "yellow",
-    "color_filter": "yellow",
     "over_kategori": "overdele",
     "under_kategori": "body",
     "brand": "mini rodini",
-    "gender": ["baby"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "langærmet body med kirsebærprint",
-    "materiale": "økologisk bomuld",
-    "pasform": "Regular",
-    "rating": 4.7,
-    "images": [
-      "/product-pics/40-1.png",
-      "/product-pics/40-2.png",
-      "/product-pics/40-3.png",
-      "/product-pics/40-4.png"
-    ],
-    "size": {
-      "56": true,
-      "62": false,
-      "68": true,
-      "74": true,
-      "80": false,
-      "86": true,
-      "92": false,
-      "100": true,
-      "110": false,
-      "120": true,
-      "130": false,
-      "140": true,
-      "150": false
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Lingon Long Sleeve Body",
+        "color": "yellow",
+        "color_filter": "yellow",
+        "gender": ["baby"],
+        "sale": false,
+        "news": true,
+        "available": true,
+        "materiale": "økologisk bomuld",
+        "pasform": "Regular",
+        "rating": 4.7,
+        "images": [
+          "/product-pics/40-1.png",
+          "/product-pics/40-2.png",
+          "/product-pics/40-3.png",
+          "/product-pics/40-4.png"
+        ],
+        "size": {
+          "56": true,
+          "62": false,
+          "68": true,
+          "74": true,
+          "80": false,
+          "86": true,
+          "92": false,
+          "100": true,
+          "110": false,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
   },
   {
     "id": 42,
     "title": "Strawberries Wing Dress",
     "price": 349.95,
-    "color": "offwhite",
-    "color_filter": "white",
     "over_kategori": "overdele",
-    "under_kategori": "kjole",
+    "under_kategori": "kjoler",
     "brand": "mini rodini",
-    "gender": ["pige"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "kjole med jordbærprint",
-    "materiale": "økologisk bomuld",
-    "pasform": "Loose",
-    "rating": 4.7,
-    "images": [
-      "/product-pics/41-1.png",
-      "/product-pics/41-2.png",
-      "/product-pics/41-3.png",
-      "/product-pics/41-4.png"
-    ],
-    "size": {
-      "56": false,
-      "62": true,
-      "68": false,
-      "74": true,
-      "80": true,
-      "86": false,
-      "92": true,
-      "100": true,
-      "110": false,
-      "120": true,
-      "130": false,
-      "140": true,
-      "150": false
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Strawberries Wing Dress",
+        "color": "offwhite",
+        "color_filter": "white",
+        "gender": ["pige"],
+        "sale": false,
+        "news": true,
+        "available": true,
+        "materiale": "økologisk bomuld",
+        "pasform": "Loose",
+        "rating": 4.7,
+        "images": [
+          "/product-pics/41-1.png",
+          "/product-pics/41-2.png",
+          "/product-pics/41-3.png",
+          "/product-pics/41-4.png"
+        ],
+        "size": {
+          "56": false,
+          "62": true,
+          "68": false,
+          "74": true,
+          "80": true,
+          "86": false,
+          "92": true,
+          "100": true,
+          "110": false,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
   },
   {
     "id": 43,
     "title": "Milky Way T-shirt",
     "price": 199.95,
-    "color": "black",
-    "color_filter": "black",
-    "over_kategori": "overdele",
-    "under_kategori": "t-shirt",
     "brand": "mini rodini",
-    "gender": ["dreng"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "t-shirt med galakse print",
-    "materiale": "økologisk bomuld",
-    "pasform": "Regular",
-    "rating": 4.5,
-    "images": [
-      "/product-pics/42-1.png",
-      "/product-pics/42-2.png",
-      "/product-pics/42-3.png",
-      "/product-pics/42-4.png"
-    ],
-    "size": {
-      "56": true,
-      "62": true,
-      "68": false,
-      "74": true,
-      "80": true,
-      "86": false,
-      "92": true,
-      "100": false,
-      "110": true,
-      "120": true,
-      "130": false,
-      "140": true,
-      "150": false
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Milky Way T-shirt",
+        "color": "black",
+        "color_filter": "black",
+        "gender": ["dreng"],
+        "sale": false,
+        "news": true,
+        "available": true,
+        "materiale": "økologisk bomuld",
+        "pasform": "Regular",
+        "rating": 4.5,
+        "images": [
+          "/product-pics/42-1.png",
+          "/product-pics/42-2.png",
+          "/product-pics/42-3.png",
+          "/product-pics/42-4.png"
+        ],
+        "size": {
+          "56": true,
+          "62": true,
+          "68": false,
+          "74": true,
+          "80": true,
+          "86": false,
+          "92": true,
+          "100": false,
+          "110": true,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
   },
   {
     "id": 44,
     "title": "Travel Agency Baby Leggings",
     "price": 249.95,
-    "color": "grey",
-    "color_filter": "grey",
     "over_kategori": "underdele",
     "under_kategori": "leggings",
     "brand": "mini rodini",
-    "gender": ["baby"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "baby leggings med print",
     "variants": [
       {
@@ -1878,15 +1913,9 @@
     "id": 45,
     "title": "Stripe Leggings",
     "price": 249.95,
-    "color": "pink_blue",
-    "color_filter": "blue",
     "over_kategori": "underdele",
     "under_kategori": "leggings",
     "brand": "mini rodini",
-    "gender": ["pige"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "stribede leggings",
     "variants": [
       {
@@ -1929,15 +1958,9 @@
     "id": 46,
     "title": "Monkey Print Leggings",
     "price": 249.95,
-    "color": "navy",
-    "color_filter": "blue",
     "over_kategori": "underdele",
     "under_kategori": "leggings",
     "brand": "mini rodini",
-    "gender": ["dreng"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "leggings med abetryk",
     "variants": [
       {
@@ -2065,79 +2088,91 @@
     "id": 49,
     "title": "Strawberries Swimsuit",
     "price": 249.95,
-    "color": "offwhite",
-    "color_filter": "white",
     "over_kategori": "accessories",
     "under_kategori": "badedragt",
     "brand": "mini rodini",
-    "gender": ["pige"],
-    "sale": false,
-    "news": true,
-    "available": true,
-    "description": "badedragt med jordbærprint",
-    "materiale": "polyester",
-    "pasform": "Regular",
-    "rating": 4.7,
-    "images": [
-      "/product-pics/48-1.png",
-      "/product-pics/48-2.png",
-      "/product-pics/48-3.png",
-      "/product-pics/48-4.png"
-    ],
-    "size": {
-      "56": true,
-      "62": false,
-      "68": true,
-      "74": true,
-      "80": false,
-      "86": true,
-      "92": false,
-      "100": true,
-      "110": true,
-      "120": false,
-      "130": true,
-      "140": false,
-      "150": true
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Strawberries Swimsuit",
+        "color": "offwhite",
+        "color_filter": "white",
+        "gender": ["pige"],
+        "sale": false,
+        "news": true,
+        "available": true,
+        "description": "badedragt med jordbærprint",
+        "materiale": "polyester",
+        "pasform": "Regular",
+        "rating": 4.7,
+        "images": [
+          "/product-pics/48-1.png",
+          "/product-pics/48-2.png",
+          "/product-pics/48-3.png",
+          "/product-pics/48-4.png"
+        ],
+        "size": {
+          "56": true,
+          "62": false,
+          "68": true,
+          "74": true,
+          "80": false,
+          "86": true,
+          "92": false,
+          "100": true,
+          "110": true,
+          "120": false,
+          "130": true,
+          "140": false,
+          "150": true
+        }
+      }
+    ]
   },
   {
     "id": 50,
     "title": "UV Swim Shirt",
     "price": 249.95,
-    "color": "blue",
-    "color_filter": "blue",
     "over_kategori": "accessories",
     "under_kategori": "badetøj",
     "brand": "mini rodini",
-    "gender": ["unisex"],
-    "sale": false,
-    "news": false,
-    "available": true,
     "description": "uv trøje til badning",
-    "materiale": "polyester",
-    "pasform": "Regular",
-    "rating": 4.5,
-    "images": [
-      "/product-pics/49-1.png",
-      "/product-pics/49-2.png",
-      "/product-pics/49-3.png",
-      "/product-pics/49-4.png"
-    ],
-    "size": {
-      "56": false,
-      "62": true,
-      "68": false,
-      "74": true,
-      "80": true,
-      "86": false,
-      "92": true,
-      "100": true,
-      "110": false,
-      "120": true,
-      "130": false,
-      "140": true,
-      "150": false
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "UV Swim Shirt",
+        "color": "blue",
+        "color_filter": "blue",
+        "gender": ["unisex"],
+        "sale": false,
+        "news": false,
+        "available": true,
+        "materiale": "polyester",
+        "pasform": "Regular",
+        "rating": 4.5,
+        "images": [
+          "/product-pics/49-1.png",
+          "/product-pics/49-2.png",
+          "/product-pics/49-3.png",
+          "/product-pics/49-4.png"
+        ],
+        "size": {
+          "56": false,
+          "62": true,
+          "68": false,
+          "74": true,
+          "80": true,
+          "86": false,
+          "92": true,
+          "100": true,
+          "110": false,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
   },
 
   {
@@ -2224,82 +2259,93 @@
     "id": 52,
     "title": "Daisy Heavy Puffer Jacket",
     "price": 999.95,
-    "color": "green",
-    "color_filter": "green",
     "over_kategori": "overtøj",
     "under_kategori": "jakke",
     "brand": "mini rodini",
-    "gender": ["pige"],
-    "sale": false,
-    "news": true,
-    "available": true,
-    "description": "varm vinterjakke med print",
-    "materiale": "polyester",
-    "pasform": "Regular",
-    "rating": 4.8,
-    "images": [
-      "/product-pics/52-1.png",
-      "/product-pics/52-2.png",
-      "/product-pics/52-3.png",
-      "/product-pics/52-4.png"
-    ],
-    "size": {
-      "56": true,
-      "62": false,
-      "68": true,
-      "74": true,
-      "80": false,
-      "86": true,
-      "92": false,
-      "100": true,
-      "110": true,
-      "120": false,
-      "130": true,
-      "140": false,
-      "150": true
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Daisy Heavy Puffer Jacket",
+        "color": "green",
+        "color_filter": "green",
+        "gender": ["pige"],
+        "sale": false,
+        "news": true,
+        "available": true,
+        "description": "varm vinterjakke med print",
+        "materiale": "polyester",
+        "pasform": "Regular",
+        "rating": 4.8,
+        "images": [
+          "/product-pics/52-1.png",
+          "/product-pics/52-2.png",
+          "/product-pics/52-3.png",
+          "/product-pics/52-4.png"
+        ],
+        "size": {
+          "56": true,
+          "62": false,
+          "68": true,
+          "74": true,
+          "80": false,
+          "86": true,
+          "92": false,
+          "100": true,
+          "110": true,
+          "120": false,
+          "130": true,
+          "140": false,
+          "150": true
+        }
+      }
+    ]
   },
 
   {
     "id": 53,
     "title": "Heavy Puffer Jacket",
     "price": 899.95,
-    "color": "black",
-    "color_filter": "black",
     "over_kategori": "overtøj",
     "under_kategori": "jakke",
     "brand": "mini rodini",
-    "gender": ["dreng"],
-    "sale": false,
-    "news": false,
-    "available": true,
     "description": "klassisk vinterjakke",
-    "materiale": "polyester",
-    "pasform": "Regular",
-    "rating": 4.7,
-    "images": [
-      "/product-pics/53-1.png",
-      "/product-pics/53-2.png",
-      "/product-pics/53-3.png",
-      "/product-pics/53-4.png"
-    ],
-    "size": {
-      "56": false,
-      "62": true,
-      "68": false,
-      "74": true,
-      "80": true,
-      "86": false,
-      "92": true,
-      "100": true,
-      "110": false,
-      "120": true,
-      "130": false,
-      "140": true,
-      "150": false
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Heavy Puffer Jacket",
+        "color": "black",
+        "color_filter": "black",
+        "gender": ["dreng"],
+        "sale": false,
+        "news": false,
+        "available": true,
+        "materiale": "polyester",
+        "pasform": "Regular",
+        "rating": 4.7,
+        "images": [
+          "/product-pics/53-1.png",
+          "/product-pics/53-2.png",
+          "/product-pics/53-3.png",
+          "/product-pics/53-4.png"
+        ],
+        "size": {
+          "56": false,
+          "62": true,
+          "68": false,
+          "74": true,
+          "80": true,
+          "86": false,
+          "92": true,
+          "100": true,
+          "110": false,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
   },
-
   {
     "id": 54,
     "title": "Belito Rib Body",
@@ -2382,305 +2428,355 @@
   {
     "id": 56,
     "title": "Danal Denim Dress",
-    "price": 499.95,
-    "color": "blue",
-    "color_filter": "blue",
     "over_kategori": "overdele",
     "under_kategori": "kjole",
     "brand": "marMar copenhagen",
-    "gender": ["pige"],
-    "sale": false,
-    "news": true,
-    "available": true,
+    "price": 499.95,
     "description": "denim kjole til børn",
-    "materiale": "denim",
-    "pasform": "Loose",
-    "rating": 4.6,
-    "images": [
-      "/product-pics/56-1.png",
-      "/product-pics/56-2.png",
-      "/product-pics/58-3.png",
-      "/product-pics/56-4.png"
-    ],
-    "size": {
-      "56": true,
-      "62": true,
-      "68": false,
-      "74": true,
-      "80": true,
-      "86": false,
-      "92": true,
-      "100": false,
-      "110": true,
-      "120": true,
-      "130": false,
-      "140": true,
-      "150": false
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Danal Denim Dress",
+        "color": "blue",
+        "color_filter": "blue",
+        "gender": ["pige"],
+        "sale": false,
+        "news": true,
+        "available": true,
+        "materiale": "denim",
+        "pasform": "Loose",
+        "rating": 4.6,
+        "images": [
+          "/product-pics/56-1.png",
+          "/product-pics/56-2.png",
+          "/product-pics/58-3.png",
+          "/product-pics/56-4.png"
+        ],
+        "size": {
+          "56": true,
+          "62": true,
+          "68": false,
+          "74": true,
+          "80": true,
+          "86": false,
+          "92": true,
+          "100": false,
+          "110": true,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
   },
   {
     "id": 57,
     "title": "Colour Block T-Shirt",
-    "price": 249.95,
-    "color": "hvid",
-    "color_filter": "white",
     "over_kategori": "overdele",
     "under_kategori": "t-shirt",
     "brand": "marMar copenhagen",
-    "gender": ["dreng"],
-    "sale": false,
-    "news": true,
-    "available": true,
+    "price": 249.95,
     "description": "t-shirt med farveblok",
-    "materiale": "bomuld",
-    "pasform": "Regular",
-    "rating": 4.5,
-    "images": [
-      "/product-pics/57-1.png",
-      "/product-pics/57-2.png",
-      "/product-pics/57-3.png",
-      "/product-pics/57-4.png"
-    ],
-    "size": {
-      "56": false,
-      "62": true,
-      "68": true,
-      "74": false,
-      "80": true,
-      "86": true,
-      "92": false,
-      "100": true,
-      "110": false,
-      "120": true,
-      "130": false,
-      "140": true,
-      "150": false
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Colour Block T-Shirt",
+        "color": "hvid",
+        "color_filter": "white",
+        "gender": ["dreng"],
+        "sale": false,
+        "news": true,
+        "available": true,
+
+        "materiale": "bomuld",
+        "pasform": "Regular",
+        "rating": 4.5,
+        "images": [
+          "/product-pics/57-1.png",
+          "/product-pics/57-2.png",
+          "/product-pics/57-3.png",
+          "/product-pics/57-4.png"
+        ],
+        "size": {
+          "56": false,
+          "62": true,
+          "68": true,
+          "74": false,
+          "80": true,
+          "86": true,
+          "92": false,
+          "100": true,
+          "110": false,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
   },
   {
     "id": 58,
     "title": "Basic T-Shirt",
     "price": 199.95,
-    "color": "blue",
-    "color_filter": "blue",
     "over_kategori": "overdele",
     "under_kategori": "t-shirt",
     "brand": "marMar copenhagen",
-    "gender": ["dreng"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "klassisk t-shirt",
-    "materiale": "bomuld",
-    "pasform": "Regular",
-    "rating": 4.5,
-    "images": [
-      "/product-pics/58-1.png",
-      "/product-pics/58-2.png",
-      "/product-pics/58-3.png",
-      "/product-pics/58-4.png"
-    ],
-    "size": {
-      "56": true,
-      "62": true,
-      "68": false,
-      "74": true,
-      "80": false,
-      "86": true,
-      "92": false,
-      "100": true,
-      "110": true,
-      "120": false,
-      "130": true,
-      "140": false,
-      "150": true
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Basic T-Shirt",
+        "color": "blue",
+        "color_filter": "blue",
+        "gender": ["dreng"],
+        "sale": false,
+        "news": true,
+        "available": true,
+
+        "materiale": "bomuld",
+        "pasform": "Regular",
+        "rating": 4.5,
+        "images": [
+          "/product-pics/58-1.png",
+          "/product-pics/58-2.png",
+          "/product-pics/58-3.png",
+          "/product-pics/58-4.png"
+        ],
+        "size": {
+          "56": true,
+          "62": true,
+          "68": false,
+          "74": true,
+          "80": false,
+          "86": true,
+          "92": false,
+          "100": true,
+          "110": true,
+          "120": false,
+          "130": true,
+          "140": false,
+          "150": true
+        }
+      }
+    ]
   },
   {
     "id": 59,
     "title": "Gentle Rib Tights",
     "price": 199.95,
-    "color": "white",
-    "color_filter": "white",
     "over_kategori": "underdele",
     "under_kategori": "strømpebukser",
     "brand": "marMar copenhagen",
-    "gender": ["pige"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "rib strømpebukser",
-    "materiale": "bomuld",
-    "pasform": "Slim",
-    "rating": 4.6,
-    "images": [
-      "/product-pics/59-1.png",
-      "/product-pics/59-2.png",
-      "/product-pics/59-3.png",
-      "/product-pics/59-4.png"
-    ],
-    "size": {
-      "56": false,
-      "62": true,
-      "68": false,
-      "74": true,
-      "80": true,
-      "86": false,
-      "92": true,
-      "100": true,
-      "110": false,
-      "120": true,
-      "130": false,
-      "140": true,
-      "150": false
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Gentle Rib Tights",
+        "color": "white",
+        "color_filter": "white",
+        "gender": ["pige"],
+        "sale": false,
+        "news": true,
+        "available": true,
+        "materiale": "bomuld",
+        "pasform": "Slim",
+        "rating": 4.6,
+        "images": [
+          "/product-pics/59-1.png",
+          "/product-pics/59-2.png",
+          "/product-pics/59-3.png",
+          "/product-pics/59-4.png"
+        ],
+        "size": {
+          "56": false,
+          "62": true,
+          "68": false,
+          "74": true,
+          "80": true,
+          "86": false,
+          "92": true,
+          "100": true,
+          "110": false,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
   },
   {
     "id": 60,
     "title": "Glitter Tights",
     "price": 149.95,
-    "color": "gold",
-    "color_filter": "yellow",
     "over_kategori": "underdele",
     "under_kategori": "strømpebukser",
     "brand": "marMar copenhagen",
-    "gender": ["pige"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "glimmer strømpebukser",
-    "materiale": "bomuld / elastan",
-    "pasform": "Slim",
-    "rating": 4.6,
-    "images": [
-      "/product-pics/60-1.png",
-      "/product-pics/60-2.png",
-      "/product-pics/60-3.png",
-      "/product-pics/60-4.png"
-    ],
-    "size": {
-      "56": true,
-      "62": true,
-      "68": false,
-      "74": true,
-      "80": true,
-      "86": false,
-      "92": true,
-      "100": false,
-      "110": true,
-      "120": true,
-      "130": false,
-      "140": true,
-      "150": false
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Glitter Tights",
+        "color": "gold",
+        "color_filter": "yellow",
+        "gender": ["pige"],
+        "sale": false,
+        "news": true,
+        "available": true,
+        "materiale": "bomuld / elastan",
+        "pasform": "Slim",
+        "rating": 4.6,
+        "images": [
+          "/product-pics/60-1.png",
+          "/product-pics/60-2.png",
+          "/product-pics/60-3.png",
+          "/product-pics/60-4.png"
+        ],
+        "size": {
+          "56": true,
+          "62": true,
+          "68": false,
+          "74": true,
+          "80": true,
+          "86": false,
+          "92": true,
+          "100": false,
+          "110": true,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
   },
   {
     "id": 61,
     "title": "Azusa Socks – Colourblock",
     "price": 99.95,
-    "color": "multicolor block",
-    "color_filter": "multicolor",
     "over_kategori": "underdele",
     "under_kategori": "strømper",
     "brand": "marMar copenhagen",
-    "gender": ["unisex"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "strikkede strømper",
-    "materiale": "bomuld",
-    "pasform": "Regular",
-    "rating": 4.5,
-    "images": ["/product-pics/61-1.png", "/product-pics/61-2.png"],
-    "size": {
-      "56": true,
-      "62": true,
-      "68": true,
-      "74": true,
-      "80": false,
-      "86": false,
-      "92": true,
-      "100": false,
-      "110": true,
-      "120": true,
-      "130": false,
-      "140": true,
-      "150": false
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Azusa Socks – Colourblock",
+        "color": "multicolor block",
+        "color_filter": "multicolor",
+        "gender": ["unisex"],
+        "sale": false,
+        "news": true,
+        "available": true,
+        "materiale": "bomuld",
+        "pasform": "Regular",
+        "rating": 4.5,
+        "images": ["/product-pics/61-1.png", "/product-pics/61-2.png"],
+        "size": {
+          "56": true,
+          "62": true,
+          "68": true,
+          "74": true,
+          "80": false,
+          "86": false,
+          "92": true,
+          "100": false,
+          "110": true,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
   },
   {
     "id": 62,
     "title": "Swinnie Bathing Suit",
     "price": 249.95,
-    "color": "blue",
-    "color_filter": "blue",
     "over_kategori": "accessories",
     "under_kategori": "badedragt",
     "brand": "marMar copenhagen",
-    "gender": ["baby"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "badedragt med flæser",
-    "materiale": "polyester",
-    "pasform": "Regular",
-    "rating": 4.7,
-    "images": [
-      "/product-pics/62-1.png",
-      "/product-pics/62-2.png",
-      "/product-pics/62-3.png",
-      "/product-pics/62-4.png"
-    ],
-    "size": {
-      "56": false,
-      "62": true,
-      "68": false,
-      "74": true,
-      "80": true,
-      "86": false,
-      "92": true,
-      "100": true,
-      "110": false,
-      "120": true,
-      "130": false,
-      "140": true,
-      "150": false
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Swinnie Bathing Suit",
+        "color": "blue",
+        "color_filter": "blue",
+        "gender": ["pige"],
+        "sale": false,
+        "news": true,
+        "available": true,
+        "materiale": "polyester",
+        "pasform": "Regular",
+        "rating": 4.7,
+        "images": [
+          "/product-pics/62-1.png",
+          "/product-pics/62-2.png",
+          "/product-pics/62-3.png",
+          "/product-pics/62-4.png"
+        ],
+        "size": {
+          "56": false,
+          "62": true,
+          "68": false,
+          "74": true,
+          "80": true,
+          "86": false,
+          "92": true,
+          "100": true,
+          "110": false,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
   },
 
   {
     "id": 63,
     "title": "Heart Print Baby Suit",
     "price": 249.95,
-    "color": "red",
-    "color_filter": "red",
     "over_kategori": "accessories",
     "under_kategori": "badedragt",
     "brand": "marMar copenhagen",
-    "gender": ["baby"],
-    "sale": false,
-    "news": false,
-    "available": true,
     "description": "badedragt med hjerter",
-    "materiale": "polyester",
-    "pasform": "Regular",
-    "rating": 4.6,
-    "images": [
-      "/product-pics/63-1.png",
-      "/product-pics/63-2.png",
-      "/product-pics/63-3.png",
-      "/product-pics/63-4.png"
-    ],
-    "size": {
-      "56": false,
-      "62": true,
-      "68": false,
-      "74": true,
-      "80": true,
-      "86": false,
-      "92": true,
-      "100": true
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Heart Print Baby Suit",
+        "color": "red",
+        "color_filter": "red",
+        "gender": ["baby"],
+        "sale": false,
+        "news": false,
+        "available": true,
+        "materiale": "polyester",
+        "pasform": "Regular",
+        "rating": 4.6,
+        "images": [
+          "/product-pics/63-1.png",
+          "/product-pics/63-2.png",
+          "/product-pics/63-3.png",
+          "/product-pics/63-4.png"
+        ],
+        "size": {
+          "56": false,
+          "62": true,
+          "68": false,
+          "74": true,
+          "80": true,
+          "86": false,
+          "92": true,
+          "100": true
+        }
+      }
+    ]
   },
 
   {
@@ -2847,35 +2943,41 @@
     "id": 68,
     "title": "Ruka Baby Suit",
     "price": 299.95,
-    "color": "starry night",
-    "color_filter": "blue",
     "over_kategori": "undertøj & nattøj",
     "under_kategori": "nattøj",
     "brand": "marMar copenhagen",
-    "gender": ["baby"],
-    "sale": false,
-    "news": false,
-    "available": true,
     "description": "nattdragt med stjerner",
-    "materiale": "bomuld",
-    "pasform": "Regular",
-    "rating": 4.7,
-    "images": [
-      "/product-pics/68-1.png",
-      "/product-pics/68-2.png",
-      "/product-pics/68-3.png",
-      "/product-pics/68-4.png"
-    ],
-    "size": {
-      "56": true,
-      "62": false,
-      "68": true,
-      "74": true,
-      "80": false,
-      "86": true,
-      "92": false,
-      "100": true
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Ruka Baby Suit",
+        "color": "starry night",
+        "color_filter": "blue",
+        "gender": ["baby"],
+        "sale": false,
+        "news": false,
+        "available": true,
+        "materiale": "bomuld",
+        "pasform": "Regular",
+        "rating": 4.7,
+        "images": [
+          "/product-pics/68-1.png",
+          "/product-pics/68-2.png",
+          "/product-pics/68-3.png",
+          "/product-pics/68-4.png"
+        ],
+        "size": {
+          "56": true,
+          "62": false,
+          "68": true,
+          "74": true,
+          "80": false,
+          "86": true,
+          "92": false,
+          "100": true
+        }
+      }
+    ]
   },
 
   {
@@ -3030,15 +3132,9 @@
     "id": 74,
     "title": "Langærmet Strikket Top",
     "price": 299.95,
-    "color": "beige",
-    "color_filter": "beige",
     "over_kategori": "overdele",
     "under_kategori": "strik",
     "brand": "lil' atelier",
-    "gender": ["pige"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "strikket bluse med dekorativ krave",
     "variants": [
       {
@@ -3081,15 +3177,9 @@
     "id": 75,
     "title": "Økologisk Bomuld Top",
     "price": 149.95,
-    "color": "blue",
-    "color_filter": "blue",
     "over_kategori": "overdele",
     "under_kategori": "bluse",
     "brand": "lil' atelier",
-    "gender": ["dreng"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "blød langærmet bluse med striber",
     "variants": [
       {
@@ -3132,15 +3222,9 @@
     "id": 76,
     "title": "Striktrøje",
     "price": 399.95,
-    "color": "brown",
-    "color_filter": "brown",
     "over_kategori": "overdele",
     "under_kategori": "strik",
     "brand": "lil' atelier",
-    "gender": ["baby"],
-    "sale": false,
-    "news": false,
-    "available": true,
     "description": "strikket babytrøje med knapper",
     "variants": [
       {
@@ -3183,133 +3267,144 @@
     "id": 77,
     "title": "Denim Overalls",
     "price": 499.95,
-    "color": "blue",
-    "color_filter": "blue",
-    "over_kategori": "underdel",
+    "over_kategori": "underdele",
     "under_kategori": "overalls",
     "brand": "lil' atelier",
-    "gender": ["unisex", "baby"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "klassiske denim overalls til baby",
-    "materiale": "bomulds denim",
-    "pasform": "Loose",
-    "rating": 4.7,
-    "images": [
-      "/product-pics/77-1.png",
-      "/product-pics/77-2.png",
-      "/product-pics/77-3.png",
-      "/product-pics/77-4.png"
-    ],
-    "size": {
-      "56": false,
-      "62": true,
-      "68": true,
-      "74": false,
-      "80": true,
-      "86": true,
-      "92": false,
-      "100": true,
-      "110": false,
-      "120": true,
-      "130": false,
-      "140": true,
-      "150": false
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Denim Overalls",
+        "color": "blue",
+        "color_filter": "blue",
+        "gender": ["unisex", "baby"],
+        "sale": false,
+        "news": true,
+        "available": true,
+        "materiale": "bomulds denim",
+        "pasform": "Loose",
+        "rating": 4.7,
+        "images": [
+          "/product-pics/77-1.png",
+          "/product-pics/77-2.png",
+          "/product-pics/77-3.png",
+          "/product-pics/77-4.png"
+        ],
+        "size": {
+          "56": false,
+          "62": true,
+          "68": true,
+          "74": false,
+          "80": true,
+          "86": true,
+          "92": false,
+          "100": true,
+          "110": false,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
   },
   {
     "id": 78,
     "title": "Loose Fit Bukser",
     "price": 249.95,
-    "color": "white",
-    "color_filter": ["white", "grey"],
-    "over_kategori": "underdel",
+    "over_kategori": "underdele",
     "under_kategori": "bukser",
     "brand": "lil' atelier",
-    "gender": ["unisex"],
-    "sale": false,
-    "news": false,
-    "available": true,
     "description": "lette bukser med elastik",
-    "materiale": "økologisk bomuld",
-    "pasform": "Loose",
-    "rating": 4.4,
-    "images": [
-      "/product-pics/78-1.png",
-      "/product-pics/78-2.png",
-      "/product-pics/78-3.png",
-      "/product-pics/78-4.png"
-    ],
-    "size": {
-      "56": true,
-      "62": false,
-      "68": true,
-      "74": true,
-      "80": false,
-      "86": true,
-      "92": false,
-      "100": true,
-      "110": false,
-      "120": true,
-      "130": false,
-      "140": true,
-      "150": false
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Loose Fit Bukser",
+        "color": "white",
+        "color_filter": ["white", "grey"],
+        "gender": ["unisex"],
+        "sale": false,
+        "news": false,
+        "available": true,
+        "materiale": "økologisk bomuld",
+        "pasform": "Loose",
+        "rating": 4.4,
+        "images": [
+          "/product-pics/78-1.png",
+          "/product-pics/78-2.png",
+          "/product-pics/78-3.png",
+          "/product-pics/78-4.png"
+        ],
+        "size": {
+          "56": true,
+          "62": false,
+          "68": true,
+          "74": true,
+          "80": false,
+          "86": true,
+          "92": false,
+          "100": true,
+          "110": false,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
   },
   {
     "id": 79,
     "title": "Loose Fit Jeans",
     "price": 299.95,
-    "color": "blue",
-    "color_filter": "blue",
-    "over_kategori": "underdel",
+    "over_kategori": "underdele",
     "under_kategori": "jeans",
     "brand": "lil' atelier",
-    "gender": ["dreng"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "komfortable denim jeans til børn",
-    "materiale": "bomulds denim",
-    "pasform": "Regular",
-    "rating": 4.3,
-    "images": [
-      "/product-pics/79-1.png",
-      "/product-pics/79-2.png",
-      "/product-pics/79-3.png",
-      "/product-pics/79-4.png"
-    ],
-    "size": {
-      "56": false,
-      "62": true,
-      "68": false,
-      "74": true,
-      "80": true,
-      "86": false,
-      "92": true,
-      "100": true,
-      "110": false,
-      "120": true,
-      "130": false,
-      "140": true,
-      "150": false
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Loose Fit Jeans",
+        "color": "blue",
+        "color_filter": "blue",
+        "gender": ["dreng"],
+        "sale": false,
+        "news": true,
+        "available": true,
+        "materiale": "bomulds denim",
+        "pasform": "Regular",
+        "rating": 4.3,
+        "images": [
+          "/product-pics/79-1.png",
+          "/product-pics/79-2.png",
+          "/product-pics/79-3.png",
+          "/product-pics/79-4.png"
+        ],
+        "size": {
+          "56": false,
+          "62": true,
+          "68": false,
+          "74": true,
+          "80": true,
+          "86": false,
+          "92": true,
+          "100": true,
+          "110": false,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
   },
-
   {
     "id": 80,
     "title": "Hair Bow Set",
     "price": 149.95,
-    "color": "multicolor",
-    "color_filter": ["multicolor", "beige"],
     "over_kategori": "accessories",
     "under_kategori": "hårpynt",
     "brand": "lil' atelier",
-    "gender": ["pige"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "bløde hårsløjfer i neutrale farver",
     "variants": [
       {
@@ -3352,15 +3447,9 @@
     "id": 81,
     "title": "Sixpence Hat",
     "price": 199.95,
-    "color": "olive",
-    "color_filter": "green",
     "over_kategori": "accessories",
     "under_kategori": "hat",
     "brand": "lil' atelier",
-    "gender": ["dreng"],
-    "sale": false,
-    "news": false,
-    "available": true,
     "description": "klassisk sixpence kasket",
     "variants": [
       {
@@ -3399,7 +3488,6 @@
       }
     ]
   },
-
   {
     "id": 82,
     "title": "2-Pack Baby Strømper",
@@ -3461,21 +3549,19 @@
           "/product-pics/2-pak-socks-hvid-3.png"
         ],
         "size": {
-          "size": {
-            "56": true,
-            "62": true,
-            "68": false,
-            "74": true,
-            "80": true,
-            "86": false,
-            "92": true,
-            "100": false,
-            "110": false,
-            "120": true,
-            "130": false,
-            "140": true,
-            "150": true
-          }
+          "56": true,
+          "62": true,
+          "68": false,
+          "74": true,
+          "80": true,
+          "86": false,
+          "92": true,
+          "100": false,
+          "110": false,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": true
         }
       }
     ]
@@ -3484,54 +3570,54 @@
     "id": 83,
     "title": "Pyjamas Set",
     "price": 199.95,
-    "color": "brown",
-    "color_filter": "brown",
     "over_kategori": "undertøj & nattøj",
     "under_kategori": "nattøj",
     "brand": "lil' atelier",
-    "gender": ["dreng"],
-    "sale": false,
-    "news": false,
-    "available": true,
     "description": "komfortabelt stribet nattøj",
-    "materiale": "økologisk bomuld",
-    "pasform": "Regular",
-    "rating": 4.4,
-    "images": [
-      "/product-pics/83-1.png",
-      "/product-pics/83-2.png",
-      "/product-pics/83-3.png",
-      "/product-pics/83-4.png"
-    ],
-    "size": {
-      "56": true,
-      "62": false,
-      "68": true,
-      "74": true,
-      "80": false,
-      "86": true,
-      "92": false,
-      "100": true,
-      "110": true,
-      "120": false,
-      "130": true,
-      "140": false,
-      "150": true
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Pyjamas Set",
+        "color": "brown",
+        "color_filter": "brown",
+        "gender": ["dreng"],
+        "sale": false,
+        "news": false,
+        "available": true,
+        "materiale": "økologisk bomuld",
+        "pasform": "Regular",
+        "rating": 4.4,
+        "images": [
+          "/product-pics/83-1.png",
+          "/product-pics/83-2.png",
+          "/product-pics/83-3.png",
+          "/product-pics/83-4.png"
+        ],
+        "size": {
+          "56": true,
+          "62": false,
+          "68": true,
+          "74": true,
+          "80": false,
+          "86": true,
+          "92": false,
+          "100": true,
+          "110": true,
+          "120": false,
+          "130": true,
+          "140": false,
+          "150": true
+        }
+      }
+    ]
   },
   {
     "id": 84,
     "title": "Printet Nattdragt",
     "price": 249.95,
-    "color": "beige",
-    "color_filter": "beige",
     "over_kategori": "undertøj & nattøj",
     "under_kategori": "heldragt",
     "brand": "lil' atelier",
-    "gender": ["baby"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "blød baby heldragt med print",
     "variants": [
       {
@@ -3767,47 +3853,53 @@
     "id": 94,
     "title": "T-shirt",
     "price": 299.95,
-    "color": "blue",
-    "color_filter": "blue",
     "over_kategori": "overdele",
     "under_kategori": "t-shirt",
     "brand": "wheat",
-    "gender": ["dreng"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "kortærmet t-shirt med print",
-    "materiale": "økologisk bomuld",
-    "pasform": "Regular",
-    "rating": 4.5,
-    "images": [
-      "/product-pics/94-1.png",
-      "/product-pics/94-2.png",
-      "/product-pics/94-3.png",
-      "/product-pics/94-4.png"
-    ],
-    "size": {
-      "56": true,
-      "62": false,
-      "68": true,
-      "74": true,
-      "80": false,
-      "86": true,
-      "92": false,
-      "100": true,
-      "110": true,
-      "120": false,
-      "130": true,
-      "140": false,
-      "150": true
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "T-shirt",
+        "color": "blue",
+        "color_filter": "blue",
+        "gender": ["dreng"],
+        "sale": false,
+        "news": true,
+        "available": true,
+        "materiale": "økologisk bomuld",
+        "pasform": "Regular",
+        "rating": 4.5,
+        "images": [
+          "/product-pics/94-1.png",
+          "/product-pics/94-2.png",
+          "/product-pics/94-3.png",
+          "/product-pics/94-4.png"
+        ],
+        "size": {
+          "56": true,
+          "62": false,
+          "68": true,
+          "74": true,
+          "80": false,
+          "86": true,
+          "92": false,
+          "100": true,
+          "110": true,
+          "120": false,
+          "130": true,
+          "140": false,
+          "150": true
+        }
+      }
+    ]
   },
 
   {
     "id": 95,
     "title": "Jules Leggings",
     "price": 249.95,
-    "over_kategori": "underdel",
+    "over_kategori": "underdele",
     "under_kategori": "leggings",
     "brand": "wheat",
     "description": "bløde leggings med citronprint",
@@ -4129,35 +4221,43 @@
     "over_kategori": "accessories",
     "under_kategori": "badedragt",
     "brand": "wheat",
-    "gender": ["pige"],
-    "sale": false,
-    "news": false,
-    "available": true,
     "description": "klassisk badedragt med flæser",
-    "materiale": "polyester",
-    "pasform": "Regular",
-    "rating": 4.6,
-    "images": [
-      "/product-pics/102-1.png",
-      "/product-pics/102-2.png",
-      "/product-pics/102-3.png",
-      "/product-pics/102-4.png"
-    ],
-    "size": {
-      "56": false,
-      "62": true,
-      "68": true,
-      "74": false,
-      "80": true,
-      "86": true,
-      "92": false,
-      "100": true,
-      "110": false,
-      "120": true,
-      "130": false,
-      "140": true,
-      "150": false
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Badedragt",
+        "color": "white",
+        "color_filter": "white",
+        "gender": ["pige"],
+        "sale": false,
+        "news": false,
+        "available": true,
+        "materiale": "polyester",
+        "pasform": "Regular",
+        "rating": 4.6,
+        "images": [
+          "/product-pics/102-1.png",
+          "/product-pics/102-2.png",
+          "/product-pics/102-3.png",
+          "/product-pics/102-4.png"
+        ],
+        "size": {
+          "56": false,
+          "62": true,
+          "68": true,
+          "74": false,
+          "80": true,
+          "86": true,
+          "92": false,
+          "100": true,
+          "110": false,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
   },
 
   {
@@ -4242,79 +4342,91 @@
     "id": 104,
     "title": "Undertøj",
     "price": 199.95,
-    "color": "blue",
-    "color_filter": "blue",
     "over_kategori": "undertøj & nattøj",
     "under_kategori": "undertøj",
     "brand": "wheat",
-    "gender": ["dreng"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "blødt undertøjssæt",
-    "materiale": "økologisk bomuld",
-    "pasform": "Regular",
-    "rating": 4.5,
-    "images": [
-      "/product-pics/104-1.png",
-      "/product-pics/104-2.png",
-      "/product-pics/104-3.png",
-      "/product-pics/104-4.png"
-    ],
-    "size": {
-      "56": false,
-      "62": true,
-      "68": false,
-      "74": true,
-      "80": true,
-      "86": false,
-      "92": true,
-      "100": true,
-      "110": false,
-      "120": true,
-      "130": false,
-      "140": true,
-      "150": false
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Undertøj",
+        "color": "blue",
+        "color_filter": "blue",
+        "gender": ["dreng"],
+        "sale": false,
+        "news": true,
+        "available": true,
+        "materiale": "økologisk bomuld",
+        "pasform": "Regular",
+        "rating": 4.5,
+        "images": [
+          "/product-pics/104-1.png",
+          "/product-pics/104-2.png",
+          "/product-pics/104-3.png",
+          "/product-pics/104-4.png"
+        ],
+        "size": {
+          "56": false,
+          "62": true,
+          "68": false,
+          "74": true,
+          "80": true,
+          "86": false,
+          "92": true,
+          "100": true,
+          "110": false,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
   },
   {
     "id": 105,
     "title": "Lucia Kjole",
     "price": 399.95,
-    "color": "white",
-    "color_filter": "white",
     "over_kategori": "undertøj & nattøj",
     "under_kategori": "nattøj",
     "brand": "wheat",
-    "gender": ["pige"],
-    "sale": false,
-    "news": false,
-    "available": true,
     "description": "let natkjole i bomuld",
-    "materiale": "økologisk bomuld",
-    "pasform": "Loose",
-    "rating": 4.5,
-    "images": [
-      "/product-pics/105-1.png",
-      "/product-pics/105-2.png",
-      "/product-pics/105-3.png",
-      "/product-pics/105-4.png"
-    ],
-    "size": {
-      "56": true,
-      "62": true,
-      "68": false,
-      "74": true,
-      "80": true,
-      "86": false,
-      "92": true,
-      "100": false,
-      "110": true,
-      "120": true,
-      "130": false,
-      "140": true,
-      "150": false
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Lucia Kjole",
+        "color": "white",
+        "color_filter": "white",
+        "gender": ["pige"],
+        "sale": false,
+        "news": false,
+        "available": true,
+        "materiale": "økologisk bomuld",
+        "pasform": "Loose",
+        "rating": 4.5,
+        "images": [
+          "/product-pics/105-1.png",
+          "/product-pics/105-2.png",
+          "/product-pics/105-3.png",
+          "/product-pics/105-4.png"
+        ],
+        "size": {
+          "56": true,
+          "62": true,
+          "68": false,
+          "74": true,
+          "80": true,
+          "86": false,
+          "92": true,
+          "100": false,
+          "110": true,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
   },
 
   {
@@ -4801,79 +4913,91 @@
     "id": 118,
     "title": "Navy Stripe Wrap Body",
     "price": 299.95,
-    "color": "blue",
-    "color_filter": "blue",
     "over_kategori": "overdele",
     "under_kategori": "body",
     "brand": "serendipity organics",
-    "gender": ["baby"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "slå-om baby body med striber",
-    "materiale": "økologisk bomuld",
-    "pasform": "Regular",
-    "rating": 4.7,
-    "images": [
-      "/product-pics/118-1.png",
-      "/product-pics/118-2.png",
-      "/product-pics/118-3.png",
-      "/product-pics/118-4.png"
-    ],
-    "size": {
-      "56": true,
-      "62": false,
-      "68": true,
-      "74": true,
-      "80": false,
-      "86": true,
-      "92": false,
-      "100": true,
-      "110": true,
-      "120": false,
-      "130": true,
-      "140": false,
-      "150": true
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Navy Stripe Wrap Body",
+        "color": "blue",
+        "color_filter": "blue",
+        "gender": ["baby"],
+        "sale": false,
+        "news": true,
+        "available": true,
+        "materiale": "økologisk bomuld",
+        "pasform": "Regular",
+        "rating": 4.7,
+        "images": [
+          "/product-pics/118-1.png",
+          "/product-pics/118-2.png",
+          "/product-pics/118-3.png",
+          "/product-pics/118-4.png"
+        ],
+        "size": {
+          "56": true,
+          "62": false,
+          "68": true,
+          "74": true,
+          "80": false,
+          "86": true,
+          "92": false,
+          "100": true,
+          "110": true,
+          "120": false,
+          "130": true,
+          "140": false,
+          "150": true
+        }
+      }
+    ]
   },
   {
     "id": 119,
     "title": "Coral Stripe Wrap Body",
     "price": 299.95,
-    "color": "coral",
-    "color_filter": "coral",
     "over_kategori": "overdele",
     "under_kategori": "body",
     "brand": "serendipity organics",
-    "gender": ["baby"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "blød slå-om body til baby",
-    "materiale": "økologisk bomuld",
-    "pasform": "Regular",
-    "rating": 4.6,
-    "images": [
-      "/product-pics/119-1.png",
-      "/product-pics/119-2.png",
-      "/product-pics/119-3.png",
-      "/product-pics/119-4.png"
-    ],
-    "size": {
-      "56": false,
-      "62": true,
-      "68": false,
-      "74": true,
-      "80": true,
-      "86": false,
-      "92": true,
-      "100": true,
-      "110": false,
-      "120": true,
-      "130": false,
-      "140": true,
-      "150": false
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Coral Stripe Wrap Body",
+        "color": "coral",
+        "color_filter": "coral",
+        "gender": ["baby"],
+        "sale": false,
+        "news": true,
+        "available": true,
+        "materiale": "økologisk bomuld",
+        "pasform": "Regular",
+        "rating": 4.6,
+        "images": [
+          "/product-pics/119-1.png",
+          "/product-pics/119-2.png",
+          "/product-pics/119-3.png",
+          "/product-pics/119-4.png"
+        ],
+        "size": {
+          "56": false,
+          "62": true,
+          "68": false,
+          "74": true,
+          "80": true,
+          "86": false,
+          "92": true,
+          "100": true,
+          "110": false,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
   },
   {
     "id": 129,
@@ -5104,40 +5228,46 @@
     "id": 135,
     "title": "Gio nattøjssæt",
     "price": 299.95,
-    "color": "antique stripe",
-    "color_filter": ["multicolor", "white"],
     "over_kategori": "undertøj og nattøj",
     "under_kategori": "nattøj",
     "brand": "konges slojd",
-    "gender": ["dreng"],
-    "sale": false,
-    "news": true,
-    "available": true,
-    "description": "blødt todelt sæt med langærmet t-shirt og bukser med elastik i taljen.",
-    "materiale": "økologisk bomuld",
-    "pasform": "Regular",
-    "rating": 4.6,
-    "images": [
-      "/product-pics/135-1.png",
-      "/product-pics/135-2.png",
-      "/product-pics/135-3.png",
-      "/product-pics/135-4.png"
-    ],
-    "size": {
-      "56": true,
-      "62": false,
-      "68": true,
-      "74": true,
-      "80": false,
-      "86": true,
-      "92": false,
-      "100": true,
-      "110": true,
-      "120": false,
-      "130": true,
-      "140": false,
-      "150": true
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Gio nattøjssæt",
+        "color": "antique stripe",
+        "color_filter": ["multicolor", "white"],
+        "gender": ["dreng"],
+        "sale": false,
+        "news": true,
+        "available": true,
+        "description": "blødt todelt sæt med langærmet t-shirt og bukser med elastik i taljen.",
+        "materiale": "økologisk bomuld",
+        "pasform": "Regular",
+        "rating": 4.6,
+        "images": [
+          "/product-pics/135-1.png",
+          "/product-pics/135-2.png",
+          "/product-pics/135-3.png",
+          "/product-pics/135-4.png"
+        ],
+        "size": {
+          "56": true,
+          "62": false,
+          "68": true,
+          "74": true,
+          "80": false,
+          "86": true,
+          "92": false,
+          "100": true,
+          "110": true,
+          "120": false,
+          "130": true,
+          "140": false,
+          "150": true
+        }
+      }
+    ]
   },
 
   {
@@ -5307,35 +5437,43 @@
     "over_kategori": "overtøj",
     "under_kategori": "termojakke",
     "brand": "konges slojd",
-    "gender": ["dreng"],
-    "sale": false,
-    "news": false,
-    "available": true,
     "description": "juno er en let termojakke med varm polyesterpolstring, der giver effektiv isolering, og en åndbar, fluorfri imprægnering, der gør jakken både vindtæt og vandafvisende.",
-    "materiale": "BIONIC-FINISH® ECO",
-    "pasform": "Loose",
-    "rating": 4.3,
-    "images": [
-      "/product-pics/140-1.png",
-      "/product-pics/140-2.png",
-      "/product-pics/140-3.png",
-      "/product-pics/140-4.png"
-    ],
-    "size": {
-      "56": false,
-      "62": true,
-      "68": false,
-      "74": true,
-      "80": true,
-      "86": false,
-      "92": true,
-      "100": true,
-      "110": false,
-      "120": true,
-      "130": false,
-      "140": true,
-      "150": false
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "juno Bomberjakke",
+        "color": "navy",
+        "color_filter": "blue",
+        "gender": ["dreng"],
+        "sale": false,
+        "news": false,
+        "available": true,
+        "materiale": "BIONIC-FINISH® ECO",
+        "pasform": "Loose",
+        "rating": 4.3,
+        "images": [
+          "/product-pics/140-1.png",
+          "/product-pics/140-2.png",
+          "/product-pics/140-3.png",
+          "/product-pics/140-4.png"
+        ],
+        "size": {
+          "56": false,
+          "62": true,
+          "68": false,
+          "74": true,
+          "80": true,
+          "86": false,
+          "92": true,
+          "100": true,
+          "110": false,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
   },
 
   {
@@ -5421,78 +5559,90 @@
     "id": 145,
     "title": "saga futter",
     "price": 299.95,
-    "color": "grey",
-    "color_filter": "grey",
-    "over_kategori": "sko",
+    "over_kategori": "fodtøj",
     "under_kategori": "futter",
     "brand": "konges sløjd",
-    "gender": ["baby"],
-    "sale": false,
-    "news": true,
-    "available": true,
     "description": "babysstøvler lavet i 100 procent uldfleece med ribstrikkede elastiske manchetter og en blød sål.",
-    "materiale": "merinould fleece",
-    "pasform": "Regular",
-    "rating": 4.5,
-    "images": [
-      "/product-pics/145-1.png",
-      "/product-pics/145-2.png",
-      "/product-pics/145-3.png",
-      "/product-pics/145-4.png"
-    ],
-    "size": {
-      "56": true,
-      "62": false,
-      "68": true,
-      "74": true,
-      "80": false,
-      "86": true,
-      "92": false,
-      "100": true,
-      "110": true,
-      "120": false,
-      "130": true,
-      "140": false,
-      "150": true
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "saga futter",
+        "color": "grey",
+        "color_filter": "grey",
+        "gender": ["baby"],
+        "sale": false,
+        "news": true,
+        "available": true,
+        "materiale": "merinould fleece",
+        "pasform": "Regular",
+        "rating": 4.5,
+        "images": [
+          "/product-pics/145-1.png",
+          "/product-pics/145-2.png",
+          "/product-pics/145-3.png",
+          "/product-pics/145-4.png"
+        ],
+        "size": {
+          "56": true,
+          "62": false,
+          "68": true,
+          "74": true,
+          "80": false,
+          "86": true,
+          "92": false,
+          "100": true,
+          "110": true,
+          "120": false,
+          "130": true,
+          "140": false,
+          "150": true
+        }
+      }
+    ]
   },
   {
     "id": 146,
     "title": "Saga køredragt",
     "price": 799.95,
-    "color": "brown",
-    "color_filter": "brown",
     "over_kategori": "overtøj",
     "under_kategori": "flyverdragt",
     "brand": "konges sløjd",
-    "gender": ["baby"],
-    "sale": false,
-    "news": false,
-    "available": true,
     "description": "vores saga serie består af en række uundværlige fleece-modeller til de mindste, der er designet til at holde dem varme og komfortable hele vinteren. denne lune saga heldragt er ideel, når du er på tur med dit barn i barnevogn, klapvogn eller bæresel på kolde dage. den er fremstillet i det blødeste børstede uldfleece og er forsynet med ribkanter ved håndleddene og perlemorsknapper.",
-    "materiale": "100 % uldfleece",
-    "pasform": "Regular",
-    "rating": 4.2,
-    "images": [
-      "/product-pics/146-1.png",
-      "/product-pics/146-2.png",
-      "/product-pics/146-3.png",
-      "/product-pics/146-4.png"
-    ],
-    "size": {
-      "56": false,
-      "62": true,
-      "68": false,
-      "74": true,
-      "80": true,
-      "86": false,
-      "92": true,
-      "100": true,
-      "110": false,
-      "120": true,
-      "130": false,
-      "140": true,
-      "150": false
-    }
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Saga køredragt",
+        "color": "brown",
+        "color_filter": "brown",
+        "gender": ["baby"],
+        "sale": false,
+        "news": false,
+        "available": true,
+        "materiale": "100 % uldfleece",
+        "pasform": "Regular",
+        "rating": 4.2,
+        "images": [
+          "/product-pics/146-1.png",
+          "/product-pics/146-2.png",
+          "/product-pics/146-3.png",
+          "/product-pics/146-4.png"
+        ],
+        "size": {
+          "56": false,
+          "62": true,
+          "68": false,
+          "74": true,
+          "80": true,
+          "86": false,
+          "92": true,
+          "100": true,
+          "110": false,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
   }
 ]
